@@ -1,5 +1,5 @@
 import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap'
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 function MainPage() {
