@@ -1,5 +1,6 @@
 import HomePage from "../HomePage";
 import HomePageContent from "../HomePageContent";
+import Searchbar from "../Searchbar";
 
 const HomePageFinal = () => {
     return (
