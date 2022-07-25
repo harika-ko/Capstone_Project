@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { InputGroup, Form, ListGroup } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import SingleRecipe from "./SingleRecipe";
 
 const Searchbar = ({ id }) => {
     const [data, setData] = useState([])
     const [filteredData, setFilteredData] = useState([]);
     const [clicked, setClicked] = useState(false);
     const [query, setQuery] = useState("");
+
+    console.log(id)
 
     useEffect(() => {
         fetchData();
@@ -31,13 +32,12 @@ const Searchbar = ({ id }) => {
     };
 
     const onInputClick = (wasItClicked) => {
-        console.log(clicked);
         setClicked(wasItClicked);
     };
 
     const navigate = useNavigate();
     const goToSingleRecipe = () => {
-        navigate("/SingleRecipe");
+        navigate('/SingleRecipe/' + id);
     };
 
 
@@ -51,7 +51,7 @@ const Searchbar = ({ id }) => {
 
     const fetchData = async () => {
         let response = await fetch(
-            "https://api.spoonacular.com/recipes/complexSearch?number=5219&apiKey=7d037e2e5e7c41b28f796eb9af1c7522", options
+            "https://api.spoonacular.com/recipes/complexSearch?number=5219&apiKey=192717ff7b47486faf8af662e370d037", options
         );
         let responseData = await response.json();
         console.log("This is search console", responseData);
@@ -93,7 +93,7 @@ const Searchbar = ({ id }) => {
                                             setQuery("");
                                             setFilteredData([]);
                                         }}
-                                        to={'/SingleRecipe'}
+                                        to={'/SingleRecipe/' + data.id}
                                     >
                                         <ListGroup.Item
                                             style={{

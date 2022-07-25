@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Container, Col, Row, Image } from 'react-bootstrap'
-import Searchbar from "./Searchbar";
+import Searchbar from './Searchbar'
 
 const SingleRecipe = () => {
 
@@ -31,7 +31,7 @@ const SingleRecipe = () => {
     const fetchSingleRecipe = async () => {
 
         let response = await fetch(
-            `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=7d037e2e5e7c41b28f796eb9af1c7522`,
+            `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=192717ff7b47486faf8af662e370d037`,
             options
         );
         let responseData = await response.json();
@@ -84,7 +84,10 @@ const SingleRecipe = () => {
                             )}
                         </Row>
                     </Container>
-                    <Searchbar id={id} />
+                    <div style={{ visibility: "hidden" }}>
+                        <Searchbar id={id} />
+                    </div>
+
                 </div>
             </div>
         </>
