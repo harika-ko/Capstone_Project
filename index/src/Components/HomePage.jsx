@@ -1,4 +1,4 @@
-import { Navbar, Nav, Form, Button, FormControl, Container, Row, Col } from "react-bootstrap"
+import { Navbar, Nav, Form, Container, Row, Col } from "react-bootstrap"
 import { Link, useLocation } from 'react-router-dom'
 import Searchbar from "./Searchbar"
 
@@ -22,7 +22,14 @@ function HomePage() {
                                         }
                                     >Recipes</div>
                                 </Link>
-                                <Nav.Link href="#link">Meal Planning</Nav.Link>
+
+                                <Link to="/MealPlanning">
+                                    <div
+                                        className={
+                                            location.pathname === '/MealPlanning' ? 'nav-link active' : 'nav-link'
+                                        }
+                                    >Meal Planning</div>
+                                </Link>
                                 <Nav.Link href="#link">My Favorites</Nav.Link>
                             </Nav>
                             <Form inline>

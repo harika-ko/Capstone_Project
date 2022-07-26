@@ -12,10 +12,10 @@ function HomePageContent() {
     const navigate = useNavigate()
 
 
-    /* useEffect(() => {
-        fetchRecipes();
-        fetchPopularRecipes();
-    }, []); */
+    /*  useEffect(() => {
+         fetchRecipes();
+          fetchPopularRecipes();
+     }, []); */
 
     let options = {
         method: "GET",
@@ -27,28 +27,28 @@ function HomePageContent() {
     const key = "192717ff7b47486faf8af662e370d037"
 
     /* const fetchRecipes = async () => {
+ 
+         let response = await fetch(
+             "https://api.spoonacular.com/recipes/random?number=4&tags=vegetarian,dessert&apiKey=" + key,
+             options
+         );
+         let responseData = await response.json();
+         console.log("This is get console", responseData);
+         setRecipes(responseData.recipes);
+     };
+ 
+ 
+      const fetchPopularRecipes = async () => {
+  
+          let response = await fetch(
+              "https://api.spoonacular.com/recipes/complexSearch?veryPopular=true&apiKey=" + key,
+              options
+          );
+          let responseInfo = await response.json();
+          console.log("This is popular get console", responseInfo);
+          setPopularRecipes(responseInfo.results);
+      }; */
 
-        let response = await fetch(
-            "https://api.spoonacular.com/recipes/random?number=4&tags=vegetarian,dessert&apiKey=" + key,
-            options
-        );
-        let responseData = await response.json();
-        console.log("This is get console", responseData);
-        setRecipes(responseData.recipes);
-    };
-
-
-    const fetchPopularRecipes = async () => {
-
-        let response = await fetch(
-            "https://api.spoonacular.com/recipes/complexSearch?veryPopular=true&apiKey=" + key,
-            options
-        );
-        let responseInfo = await response.json();
-        console.log("This is popular get console", responseInfo);
-        setPopularRecipes(responseInfo.results);
-    };
- */
 
     return (
         <>
@@ -87,7 +87,7 @@ function HomePageContent() {
                 </div>
             </div>
 
-            {/*  <div style={{ backgroundColor: "#D8F0E6" }}>
+            <div style={{ backgroundColor: "#D8F0E6" }}>
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
                     <Container fluid style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem" }}>
                         <h2 className="ml-3" style={{ color: "#35B066" }}>Recipes you might like</h2>
@@ -118,7 +118,7 @@ function HomePageContent() {
 
 
 
-            <div style={{ backgroundColor: "#D8F0E6" }}>
+            {/* <div style={{ backgroundColor: "#D8F0E6" }}>
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
                     <Container fluid style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem" }}>
                         <h2 className="ml-3" style={{ color: "#35B066" }}>Popular Recipes</h2>

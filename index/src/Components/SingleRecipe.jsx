@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Container, Col, Row, Image } from 'react-bootstrap'
 import Searchbar from './Searchbar'
+import MealPlanning from "./MealPlanning";
+
+
 
 const SingleRecipe = () => {
 
@@ -50,7 +53,6 @@ const SingleRecipe = () => {
                         <h1 style={{ fontFamily: "Helvetica Neue" }}>Recipe Details</h1>
                         <Row>
                             {singlerecipe && (
-
                                 <>
                                     <Col md={6}>
                                         <div style={{ display: "flex" }}>
@@ -86,6 +88,7 @@ const SingleRecipe = () => {
                     </Container>
                     <div style={{ visibility: "hidden" }}>
                         <Searchbar id={id} />
+                        <SingleRecipe image={Image} />
                     </div>
 
                 </div>
