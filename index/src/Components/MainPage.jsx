@@ -1,6 +1,7 @@
 import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap'
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./css/Mainpage.css"
 
 function MainPage() {
 
@@ -22,35 +23,35 @@ function MainPage() {
 
 
     return (
-        <div style={{ backgroundColor: "#D8F0E6" }}>
-            <div style={{ paddingTop: "3.5rem", paddingBottom: "3.2rem" }}>
-                <Container style={{ backgroundColor: "white", borderRadius: "1rem" }}>
+        <div className="hero">
+            <div className="main">
+                <Container className="main-container">
                     <Row xs={12}>
-                        <Col style={{ marginLeft: "2.5rem", marginTop: "1rem", marginBottom: "2.5rem" }}>
-                            <h1 style={{ fontFamily: "Helvetica Neue", fontWeight: "bold" }}>Food<span style={{ color: "#34B267" }}>Ora</span></h1>
+                        <Col className="col-style">
+                            <h1 className="main-heading">Food<span style={{ color: "#34B267" }}>Ora</span></h1>
                             <h1 style={{ fontFamily: "sansSerif" }} className="mt-4">No.1 Platform <br />For All Food <br />Related Content</h1>
                             <p>Want to cook yummy recipes which are also healthy? </p>
                             <p>No need to worry!</p>
 
                             <Form onSubmit={submitHandler}>
                                 <div>
-                                    <Form.Label style={{ fontWeight: "bold" }}>Name</Form.Label>
+                                    <Form.Label className="form-label" >Name</Form.Label>
                                     <Form.Control type="text" placeholder="Enter name" onChange={e => setDetails({ ...details, name: e.target.value })} value={details.name}
-                                        style={{ width: "20rem" }} />
+                                        className="form-control" />
                                 </div>
                                 <div style={{ marginTop: "1rem" }}>
-                                    <Form.Label style={{ fontWeight: "bold" }}>Email address</Form.Label>
+                                    <Form.Label className="form-label" >Email address</Form.Label>
                                     <Form.Control type="email" placeholder="Enter email" onChange={e => setDetails({ ...details, email: e.target.value })} value={details.email}
-                                        style={{ width: "20rem" }} />
+                                        className="form-control" />
                                 </div>
                                 <div style={{ marginTop: "0.7rem" }}>
-                                    <Form.Label style={{ fontWeight: "bold" }}>Password</Form.Label>
+                                    <Form.Label className="form-label">Password</Form.Label>
                                     <Form.Control type="password" placeholder="Enter password" onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password}
-                                        style={{ width: "20rem" }} />
+                                        className="form-control" />
                                 </div>
                                 <div style={{ marginTop: "0.9rem" }}>
-                                    <Button style={{ backgroundColor: "#35B066", border: "none", marginRight: "2rem" }}>Register</Button>
-                                    <Button style={{ backgroundColor: "#35B066", border: "none" }} onClick={goToHomePage}>Login</Button>
+                                    <Button className="register-button" >Register</Button>
+                                    <Button className="login-button" onClick={goToHomePage}>Login</Button>
 
                                 </div>
                             </Form>

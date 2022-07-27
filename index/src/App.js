@@ -1,15 +1,16 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import MainPage from './Components/MainPage';
-import HomePage from './Components/HomePage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePageFinal from './Components/Pages/HomePageFinal';
 import SingleRecipe from './Components/SingleRecipe';
-import LoginPage from './Components/Pages/LoginPage';
 import MealPlanning from './Components/MealPlanning';
 import DailyMealPlan from './Components/DailyMealPlan';
+import WeeklyMealPlan from './Components/WeeklyMealPlan';
+import WhatsInMyFridge from './Components/WhatsInMyFridge';
 
 function App() {
+
   return (
     <div>
       <BrowserRouter>
@@ -19,6 +20,8 @@ function App() {
           <Route path='/SingleRecipe/:id' element={<SingleRecipe />} />
           <Route path='/MealPlanning' element={<MealPlanning />} />
           <Route path='/DailyMealPlan' element={<DailyMealPlan />} />
+          <Route path='/WeeklyMealPlan' element={<WeeklyMealPlan />} />
+          <Route path='/whats_in_my_fridge' element={<WhatsInMyFridge />} />
         </Routes>
       </BrowserRouter>
     </div>

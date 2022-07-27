@@ -30,6 +30,11 @@ function HomePage() {
                                         }
                                     >Meal Planning</div>
                                 </Link>
+                                <Link to="/whats_in_my_fridge">
+                                    <div className={
+                                        location.pathname === '/whats_in_my_fridge' ? 'nav-link active' : 'nav-link'
+                                    }>What's in my fridge</div>
+                                </Link>
                                 <Nav.Link href="#link">My Favorites</Nav.Link>
                             </Nav>
                             <Form inline>

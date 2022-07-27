@@ -45,6 +45,8 @@ const SingleRecipe = () => {
         setIngredients(responseData.extendedIngredients)
     };
 
+
+
     return (
         <>
             <div style={{ backgroundColor: "#D8F0E6" }}>
@@ -88,7 +90,6 @@ const SingleRecipe = () => {
                     </Container>
                     <div style={{ visibility: "hidden" }}>
                         <Searchbar id={id} />
-                        <SingleRecipe image={Image} />
                     </div>
 
                 </div>
