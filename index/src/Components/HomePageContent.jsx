@@ -54,36 +54,36 @@ function HomePageContent() {
         <>
 
             <div style={{ backgroundColor: "#D8F0E6" }}>
-                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
-                    <Container>
+                <div>
+                    {/* <Container>
                         <Row>
-                            <Col xs={12}>
-                                <Carousel>
-                                    <Carousel.Item>
-                                        <img
-                                            className="d-block" style={{ overflow: "hidden", objectFit: "cover", height: "30rem", borderRadius: "1rem" }}
-                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).webp"
-                                            alt="First slide"
-                                        />
-                                    </Carousel.Item>
-                                    <Carousel.Item>
-                                        <img
-                                            className="d-block" style={{ overflow: "hidden", objectFit: "cover", height: "30rem", borderRadius: "1rem" }}
-                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).jpg"
-                                            alt="Second slide"
-                                        />
-                                    </Carousel.Item>
-                                    <Carousel.Item>
-                                        <img
-                                            className="d-block" style={{ overflow: "hidden", objectFit: "cover", height: "30rem", borderRadius: "1rem" }}
-                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(86).jpg"
-                                            alt="Third slide"
-                                        />
-                                    </Carousel.Item>
-                                </Carousel>
-                            </Col>
+                            <Col xs={12}> */}
+                    <Carousel>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100" style={{ overflow: "hidden", objectFit: "cover", borderRadius: "1rem", height: "30rem" }}
+                                src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).webp"
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100" style={{ overflow: "hidden", objectFit: "cover", borderRadius: "1rem", height: "30rem" }}
+                                src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).jpg"
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100" style={{ overflow: "hidden", objectFit: "cover", borderRadius: "1rem", height: "30rem" }}
+                                src="https://mdbootstrap.com/img/Photos/Slides/img%20(86).jpg"
+                                alt="Third slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
+                    {/* </Col>
                         </Row>
-                    </Container>
+                    </Container> */}
                 </div>
             </div>
 

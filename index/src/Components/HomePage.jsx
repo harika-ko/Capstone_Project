@@ -15,14 +15,6 @@ function HomePage() {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto" style={{ fontSize: "1.4rem" }} >
-                                <Link to="/SingleRecipe">
-                                    <div
-                                        className={
-                                            location.pathname === '/SingleRecipe' ? 'nav-link active' : 'nav-link'
-                                        }
-                                    >Recipes</div>
-                                </Link>
-
                                 <Link to="/MealPlanning">
                                     <div
                                         className={

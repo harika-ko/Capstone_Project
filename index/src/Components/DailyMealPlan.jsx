@@ -24,7 +24,7 @@ const DailyMealPlan = () => {
             },
         };
         let response = await fetch(
-            `https://api.spoonacular.com/mealplanner/generate?apiKey=b26a2f3b0a00495588fc37298906d486&timeFrame=day&targetCalories=${calories}`,
+            `https://api.spoonacular.com/mealplanner/generate?apiKey=574529b6be2b4eec9565bc838355ae9a&timeFrame=day&targetCalories=${calories}`,
             options
         );
         let responseData = await response.json();
