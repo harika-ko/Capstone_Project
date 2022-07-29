@@ -2,13 +2,26 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Container, Col, Row, Image } from 'react-bootstrap'
 import Searchbar from './Searchbar'
-import MealPlanning from "./MealPlanning";
-
+import { addFavourite, removeFavourite } from "../redux/actions";
+import { useSelector, useDispatch } from "react-redux";
+import { Heart, HeartFill } from "react-bootstrap-icons";
 
 
 const SingleRecipe = () => {
-
     const [singlerecipe, setSingleRecipe] = useState({})
+
+    const favourites = useSelector((state) => state.favourites);
+
+    const dispatch = useDispatch();
+
+    const isFav = favourites.includes(singlerecipe);
+    const toggleFavourite = () => {
+        isFav
+            ? dispatch(removeFavourite(singlerecipe))
+            : dispatch(addFavourite(singlerecipe));
+    };
+
+
 
     const [instructions, setInstructions] = useState([])
 
@@ -61,6 +74,22 @@ const SingleRecipe = () => {
                                             <div>
                                                 <p style={{ fontWeight: "Bold", textTransform: "capitalize", color: "#35B066" }}>{singlerecipe.dishTypes}</p>
                                                 <h3 style={{ fontFamily: "Helvetica Neue" }}>{singlerecipe.title}</h3>
+                                                {isFav ? (
+                                                    <HeartFill
+                                                        color="red"
+                                                        size={25}
+                                                        className="me-4 my-auto"
+                                                        onClick={toggleFavourite}
+                                                    />
+                                                ) : (
+                                                    <Heart
+                                                        color="black"
+                                                        size={25}
+                                                        className="me-4 my-auto"
+                                                        onClick={toggleFavourite}
+                                                    />
+                                                )}
+
                                                 <h5 style={{ marginTop: "1.8rem", marginBottom: "1.8rem" }}>Method</h5>
                                                 {instructions.map(step => (
                                                     <p>{step.number}. {step.step}</p>
@@ -68,7 +97,7 @@ const SingleRecipe = () => {
 
                                             </div>
                                             <div>
-                                                <Image src={singlerecipe.image} style={{ height: "13rem", width: "13rem", borderRadius: "50%" }} />
+                                                <Image src={singlerecipe.image} style={{ height: "10rem", width: "10rem", borderRadius: "50%" }} />
                                             </div>
                                         </div>
                                     </Col>
@@ -90,6 +119,7 @@ const SingleRecipe = () => {
                     </Container>
                     <div style={{ visibility: "hidden" }}>
                         <Searchbar id={id} />
+
                     </div>
 
                 </div>

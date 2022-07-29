@@ -8,6 +8,8 @@ import MealPlanning from './Components/MealPlanning';
 import DailyMealPlan from './Components/DailyMealPlan';
 import WeeklyMealPlan from './Components/WeeklyMealPlan';
 import WhatsInMyFridge from './Components/WhatsInMyFridge';
+import SingleRecipeFinal from './Components/Pages/SingleRecipeFinal';
+import FavouritesPage from './Components/FavouritesPage';
 
 function App() {
 
@@ -16,12 +18,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<MainPage />} />
-          <Route path='/HomePageFinal' element={<HomePageFinal />}></Route>
-          <Route path='/SingleRecipe/:id' element={<SingleRecipe />} />
+          <Route path='/HomePageFinal' element={<HomePageFinal />} />
+          <Route path='/SingleRecipe/:id' element={<SingleRecipeFinal />} />
           <Route path='/MealPlanning' element={<MealPlanning />} />
           <Route path='/DailyMealPlan' element={<DailyMealPlan />} />
           <Route path='/WeeklyMealPlan' element={<WeeklyMealPlan />} />
           <Route path='/whats_in_my_fridge' element={<WhatsInMyFridge />} />
+          <Route path='/favourites' element={<FavouritesPage />} />
         </Routes>
       </BrowserRouter>
     </div>
