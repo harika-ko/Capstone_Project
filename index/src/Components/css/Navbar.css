@@ -1,0 +1,17 @@
+.container-style {
+    overflow: hidden;
+    font-family: "sansSerif";
+}
+
+.main-nav {
+    background-color: #D8F0E6;
+}
+
+.heading {
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+
+.text-size {
+    font-size: 1.4rem;
+}

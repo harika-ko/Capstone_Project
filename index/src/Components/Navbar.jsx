@@ -1,20 +1,21 @@
 import { Navbar, Nav, Form, Container, Row, Col } from "react-bootstrap"
 import { Link, useLocation } from 'react-router-dom'
 import Searchbar from "./Searchbar"
+import "./css/Navbar.css"
 
-function HomePage() {
+const NavBar = () => {
 
     const location = useLocation()
 
     return (
-        <Container fluid className="px-0" style={{ overflow: "hidden" }}>
+        <Container fluid className="px-0 container-style">
             <Row>
                 <Col>
-                    <Navbar expand="lg" style={{ backgroundColor: "#D8F0E6" }}>
-                        <Navbar.Brand href="#home" style={{ marginLeft: "1rem", fontSize: "2rem" }}>Food<span style={{ color: "#34B267" }}>Ora</span></Navbar.Brand>
+                    <Navbar expand="lg" className="main-nav" >
+                        <Navbar.Brand href="#home" className="heading">Food<span style={{ color: "#34B267" }}>Mood</span></Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="mr-auto" style={{ fontSize: "1.4rem" }} >
+                            <Nav className="mr-auto text-size" >
                                 <Link to="/MealPlanning">
                                     <div
                                         className={
@@ -31,9 +32,6 @@ function HomePage() {
                             </Nav>
                             <Form inline>
                                 <Searchbar />
-
-                                {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                                <Button variant="outline-success">Search</Button> */}
                             </Form>
                         </Navbar.Collapse>
                     </Navbar>
@@ -44,4 +42,4 @@ function HomePage() {
     )
 }
 
-export default HomePage
+export default NavBar

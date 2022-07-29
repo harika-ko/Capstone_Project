@@ -28,7 +28,7 @@ function MainPage() {
                 <Container className="main-container">
                     <Row xs={12}>
                         <Col className="col-style">
-                            <h1 className="main-heading">Food<span style={{ color: "#34B267" }}>Ora</span></h1>
+                            <h1 className="main-heading">Food<span style={{ color: "#34B267" }}>Mood</span></h1>
                             <h1 style={{ fontFamily: "sansSerif" }} className="mt-4">No.1 Platform <br />For All Food <br />Related Content</h1>
                             <p>Want to cook yummy recipes which are also healthy? </p>
                             <p>No need to worry!</p>

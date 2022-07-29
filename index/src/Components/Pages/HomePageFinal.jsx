@@ -1,11 +1,11 @@
-import HomePage from "../HomePage";
+import NavBar from "../Navbar";
 import HomePageContent from "../HomePageContent";
 import Searchbar from "../Searchbar";
 
 const HomePageFinal = () => {
     return (
         <div>
-            <HomePage />
+            <NavBar />
             <HomePageContent />
         </div>
     );
