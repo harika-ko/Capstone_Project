@@ -4,7 +4,7 @@ const initialState = {
     favourites: [],
 };
 
-const favouritesReducer = (state = initialState, action) => {
+const favouritesReducer = (state = initialState.favourites, action) => {
     const { type, payload } = action;
 
     switch (type) {

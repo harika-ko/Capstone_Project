@@ -12,7 +12,7 @@ function HomePageContent() {
 
 
     useEffect(() => {
-        fetchPopularRecipes();
+        //  fetchPopularRecipes();
     }, []);
 
     let options = {
@@ -24,16 +24,16 @@ function HomePageContent() {
 
     const key = "574529b6be2b4eec9565bc838355ae9a"
 
-    const fetchPopularRecipes = async () => {
-
-        let response = await fetch(
-            "https://api.spoonacular.com/recipes/complexSearch?veryPopular=true&apiKey=" + key,
-            options
-        );
-        let responseInfo = await response.json();
-        console.log("This is popular get console", responseInfo);
-        setPopularRecipes(responseInfo.results);
-    };
+    /*  const fetchPopularRecipes = async () => {
+ 
+         let response = await fetch(
+             "https://api.spoonacular.com/recipes/complexSearch?veryPopular=true&apiKey=" + key,
+             options
+         );
+         let responseInfo = await response.json();
+         console.log("This is popular get console", responseInfo);
+         setPopularRecipes(responseInfo.results);
+     }; */
 
 
     return (

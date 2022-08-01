@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
+import './css/DailyMealPlan.css'
 
 const DailyMealPlan = () => {
 
@@ -62,31 +63,34 @@ const DailyMealPlan = () => {
                                     <Row xs={12}>
                                         {mealData.map((meal) => (
                                             <>
-                                                <Col key={meal.id} style={{ marginTop: "2rem" }} >
-
-
-                                                    <Card style={{ width: '18rem', height: '28rem' }}>
-                                                        <Card.Img variant="top" src={meal.imageUrl} alt="Food Image" />
-                                                        <Card.Body>
-                                                            <Card.Title>{meal.title}</Card.Title>
-                                                            <Card.Text>
-                                                                Preparation Time: {meal.readyInMinutes} minutes
-                                                            </Card.Text>
-                                                            <Card.Text>
-                                                                No of Servings: {meal.servings}
-                                                            </Card.Text>
-                                                            <a href={meal.sourceUrl} style={{
-                                                                backgroundColor: "#35B066", border: "none", color: "white"
-                                                                , padding: "0.4rem"
-                                                            }} target="_blank">View Recipe</a>
+                                                <Col key={meal.id} style={{ marginTop: "5rem" }} >
+                                                    <Card style={{ width: '18rem', height: '28rem' }} className="card-style">
+                                                        <Card.Img variant="top" src={meal.imageUrl} className="image" alt="Food Image" />
+                                                        <Card.Body className="card-body">
+                                                            <Card.Title className="title">{meal.title}</Card.Title>
+                                                            <hr></hr>
+                                                            <div className="inner-class">
+                                                                <div>
+                                                                    <p className="para">Time</p>
+                                                                    <h6>{meal.readyInMinutes} mins</h6>
+                                                                </div>
+                                                                <div>
+                                                                    <p className="portion">Portion</p>
+                                                                    <h6>{meal.servings} persons</h6>
+                                                                </div>
+                                                            </div>
                                                         </Card.Body>
+                                                        <div class="button-div">
+                                                            <a href={meal.sourceUrl} className="button" target="_blank">View Recipe</a>
+                                                        </div>
                                                     </Card>
                                                 </Col>
                                             </>
                                         ))}
                                     </Row>
                                 </Container>
-                                <div style={{ textAlign: "center", marginTop: "2rem" }}>
+
+                                <div className="nutrients-div" style={{ textAlign: "center", marginTop: "2rem" }}>
                                     <h4 style={{ color: "#35B066" }}>Total Amount of Nutrients you gain in a Day according to the Meal Plan</h4>
                                     <p style={{ marginTop: "1rem" }}><b>Calories</b>: {nutrients.calories}</p>
                                     <p><b>Proteins</b>: {nutrients.protein}</p>

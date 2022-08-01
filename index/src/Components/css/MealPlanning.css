@@ -1,0 +1,50 @@
+.hero {
+    background-color: #D8F0E6;
+}
+
+.main-section {
+    padding-left: 1.3rem;
+    padding-right: 1rem;
+    padding-top: 5.5rem;
+    padding-bottom: 6.5rem;
+}
+
+.container {
+    background-color: white;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.main-heading {
+    font-family: 'Helvetica Neue';
+    color: #34B267;
+    text-align: center;
+}
+
+.div-1 {
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+
+.image1 {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.image1:hover {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);
+    -o-filter: blur(2px);
+    filter: blur(2px);
+}
+
+
+.head1 {
+    margin-top: 1rem;
+    text-align: center;
+}

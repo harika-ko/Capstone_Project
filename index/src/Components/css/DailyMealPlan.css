@@ -1,0 +1,65 @@
+.image {
+    border-radius: 50%;
+    position: relative;
+    height: 12rem;
+    width: 12rem;
+    top: -3rem;
+    left: 3rem;
+    object-fit: cover;
+}
+
+.card-style {
+    background-color: whitesmoke;
+}
+
+.title {
+    text-align: center;
+}
+
+.card-body {
+    padding-top: 0;
+}
+
+.inner-class {
+    display: flex;
+    justify-content: space-between;
+}
+
+.para {
+    color: rgb(112, 111, 111);
+    margin-bottom: 0.2rem;
+}
+
+.portion {
+    color: rgb(112, 111, 111);
+    margin-bottom: 0.2rem;
+}
+
+.button {
+    background-color: #35B066;
+    border: none;
+    color: white;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.6rem;
+    margin-left: 5rem;
+    border-radius: 0.2rem;
+}
+
+.button-div {
+    margin-bottom: 3rem;
+}
+
+.button-div a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.nutrients-div {
+    text-align: center;
+    margin-top: 2rem;
+    background-color: whitesmoke;
+    padding: 2rem;
+    border-radius: 1rem;
+}

@@ -35,6 +35,12 @@ const NavBar = () => {
                                     }>My Favorites</div>
                                 </Link>
 
+                                <Link to='/Shop_By_Recipe'>
+                                    <div className={
+                                        location.pathname === '/Shop_By_Recipe' ? 'nav-link active' : 'nav-link'
+                                    }>Shop By Recipe</div>
+                                </Link>
+
                             </Nav>
                             <Form inline>
                                 <Searchbar />

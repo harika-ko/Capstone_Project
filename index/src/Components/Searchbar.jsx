@@ -3,7 +3,7 @@ import { InputGroup, Form, ListGroup } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 
 const Searchbar = ({ id }) => {
-    /* const [data, setData] = useState([])
+    const [data, setData] = useState([])
     const [filteredData, setFilteredData] = useState([]);
     const [clicked, setClicked] = useState(false);
     const [query, setQuery] = useState("");
@@ -71,7 +71,7 @@ const Searchbar = ({ id }) => {
                         setQuery(e.target.value);
                     }}
                 >
-                    <Form.Control placeholder="Search" />
+                    <Form.Control placeholder="Search Recipes" />
                 </InputGroup>
             </div>
 
@@ -126,7 +126,7 @@ const Searchbar = ({ id }) => {
                 </div>
             )}
         </div>
-    ); */
+    );
 }
 
 
