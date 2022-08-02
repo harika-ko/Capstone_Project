@@ -1,0 +1,23 @@
+.result-container {
+    margin-top: 2rem;
+    background-color: whitesmoke;
+}
+
+.head1 {
+    text-align: center;
+    color: rgb(100, 99, 99);
+}
+
+div.cont {
+    text-align: center;
+}
+
+ul.list-container {
+    display: inline-block;
+    text-align: left;
+}
+
+.list {
+    font-size: 1.3rem;
+    font-weight: bold;
+}

@@ -35,10 +35,10 @@ const NavBar = () => {
                                     }>My Favorites</div>
                                 </Link>
 
-                                <Link to='/Shop_By_Recipe'>
+                                <Link to='/Wine_Pairing'>
                                     <div className={
-                                        location.pathname === '/Shop_By_Recipe' ? 'nav-link active' : 'nav-link'
-                                    }>Shop By Recipe</div>
+                                        location.pathname === '/Wine_Pairing' ? 'nav-link active' : 'nav-link'
+                                    }>Wine Pairing</div>
                                 </Link>
 
                             </Nav>
