@@ -4,8 +4,9 @@
     height: 12rem;
     width: 12rem;
     top: -3rem;
-    left: 3rem;
+    left: 4.5rem;
     object-fit: cover;
+    border: 2px solid grey;
 }
 
 .card-style {
@@ -14,6 +15,9 @@
 
 .title {
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-body {
@@ -25,30 +29,43 @@
     justify-content: space-between;
 }
 
+.clock {
+    height: 14px;
+    width: 14px;
+    margin-right: 5px;
+}
+
+.person {
+    margin-right: 5px;
+}
+
 .para {
     color: rgb(112, 111, 111);
     margin-bottom: 0.2rem;
+    display: inline;
 }
 
 .portion {
     color: rgb(112, 111, 111);
     margin-bottom: 0.2rem;
+    display: inline;
 }
 
 .button {
     background-color: #35B066;
     border: none;
     color: white;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-    padding-left: 0.5rem;
-    padding-right: 0.6rem;
-    margin-left: 5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     border-radius: 0.2rem;
 }
 
 .button-div {
+    margin-top: 1rem;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 .button-div a:hover {

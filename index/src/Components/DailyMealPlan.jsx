@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
+import { Clock, Person } from 'react-bootstrap-icons';
 import './css/DailyMealPlan.css'
 
 const DailyMealPlan = () => {
@@ -43,7 +44,7 @@ const DailyMealPlan = () => {
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
                     <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem" }}>
                         <Row>
-                            <Col xs={12}>
+                            <Col>
                                 <h1 style={{ fontFamily: "Helvetica Neue", textAlign: "center", color: "#34B267" }}>Do your Daily Meal Plan here! </h1>
 
                                 <Form style={{ marginTop: "2rem", textAlign: "center" }}>
@@ -60,28 +61,30 @@ const DailyMealPlan = () => {
                                 </Form>
 
                                 <Container>
-                                    <Row xs={12}>
+                                    <Row>
                                         {mealData.map((meal) => (
                                             <>
-                                                <Col key={meal.id} style={{ marginTop: "5rem" }} >
-                                                    <Card style={{ width: '18rem', height: '28rem' }} className="card-style">
+                                                <Col md={4} key={meal.id} style={{ marginTop: "5rem" }} >
+                                                    <Card className="card-style">
                                                         <Card.Img variant="top" src={meal.imageUrl} className="image" alt="Food Image" />
                                                         <Card.Body className="card-body">
                                                             <Card.Title className="title">{meal.title}</Card.Title>
                                                             <hr></hr>
                                                             <div className="inner-class">
                                                                 <div>
+                                                                    <Clock className="clock" />
                                                                     <p className="para">Time</p>
                                                                     <h6>{meal.readyInMinutes} mins</h6>
                                                                 </div>
                                                                 <div>
+                                                                    <Person className="person" />
                                                                     <p className="portion">Portion</p>
                                                                     <h6>{meal.servings} persons</h6>
                                                                 </div>
                                                             </div>
                                                         </Card.Body>
                                                         <div class="button-div">
-                                                            <a href={meal.sourceUrl} className="button" target="_blank">View Recipe</a>
+                                                            <a href={meal.sourceUrl} className="button" target="_blank">View Detailed Recipe</a>
                                                         </div>
                                                     </Card>
                                                 </Col>

@@ -4,7 +4,7 @@ import MainPage from './Components/MainPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePageFinal from './Components/Pages/HomePageFinal';
 import MealPlanning from './Components/MealPlanning';
-import DailyMealPlan from './Components/DailyMealPlan';
+import DailyMealPlanFinal from './Components/Pages/DailyMealPlanFinal';
 import WeeklyMealPlan from './Components/WeeklyMealPlan';
 import WhatsInMyFridge from './Components/WhatsInMyFridge';
 import SingleRecipeFinal from './Components/Pages/SingleRecipeFinal';
@@ -21,7 +21,7 @@ function App() {
           <Route path='/HomePageFinal' element={<HomePageFinal />} />
           <Route path='/SingleRecipe/:id' element={<SingleRecipeFinal />} />
           <Route path='/MealPlanning' element={<MealPlanning />} />
-          <Route path='/DailyMealPlan' element={<DailyMealPlan />} />
+          <Route path='/DailyMealPlan' element={<DailyMealPlanFinal />} />
           <Route path='/WeeklyMealPlan' element={<WeeklyMealPlan />} />
           <Route path='/whats_in_my_fridge' element={<WhatsInMyFridge />} />
           <Route path='/favourites' element={<FavouritesPage />} />
