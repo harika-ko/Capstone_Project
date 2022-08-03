@@ -28,6 +28,8 @@ const SingleRecipe = () => {
 
     const [ingredients, setIngredients] = useState([])
 
+    const [dish, setDish] = useState([])
+
     const params = useParams();
     const id = params.id;
 
@@ -57,6 +59,8 @@ const SingleRecipe = () => {
         setSingleRecipe(responseData);
         setInstructions(stepsinstructions.steps)
         setIngredients(responseData.extendedIngredients)
+        let dishes = responseData.dishTypes[0]
+        setDish(dishes)
     };
 
 
@@ -64,33 +68,38 @@ const SingleRecipe = () => {
     return (
         <>
             <div style={{ backgroundColor: "#D8F0E6" }}>
-                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
-                    <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem" }}>
+                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingTop: "2rem", minHeight: "100vh" }}>
+                    <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingLeft: "3rem" }}>
                         <h1 style={{ fontFamily: "Helvetica Neue" }}>Recipe Details</h1>
                         <Row>
                             {singlerecipe && (
                                 <>
-                                    <Col md={6}>
+                                    <Col md={6} key={singlerecipe.id}>
                                         <div style={{ display: "flex" }}>
                                             <div>
-                                                <p style={{ fontWeight: "Bold", textTransform: "capitalize", color: "#35B066" }}>{singlerecipe.dishTypes}</p>
-                                                <h3 style={{ fontFamily: "Helvetica Neue" }}>{singlerecipe.title}</h3>
-                                                {isFav ? (
-                                                    <HeartFill
-                                                        color="red"
-                                                        size={25}
-                                                        className="me-4 my-auto"
-                                                        onClick={toggleFavourite}
-                                                    />
-                                                ) : (
-                                                    <Heart
-                                                        color="black"
-                                                        size={25}
-                                                        className="me-4 my-auto"
-                                                        onClick={toggleFavourite}
-                                                    />
-                                                )}
+                                                <p style={{
+                                                    fontWeight: "Bold", textTransform: "capitalize", color: "#35B066",
+                                                }}>{dish}</p>
 
+                                                <h3 style={{ fontFamily: "Helvetica Neue", display: "inline" }}>{singlerecipe.title}</h3>
+                                                <div style={{ display: "inline", marginLeft: "1rem" }}>
+                                                    {isFav ? (
+                                                        <HeartFill
+                                                            color="red"
+                                                            size={25}
+                                                            className="me-4 my-auto"
+                                                            onClick={toggleFavourite}
+
+                                                        />
+                                                    ) : (
+                                                        <Heart
+                                                            color="black"
+                                                            size={25}
+                                                            className="me-4 my-auto"
+                                                            onClick={toggleFavourite}
+                                                        />
+                                                    )}
+                                                </div>
                                                 <h5 style={{ marginTop: "1.8rem", marginBottom: "1.8rem" }}>Method</h5>
                                                 {instructions.map(step => (
                                                     <p>{step.number}. {step.step}</p>
@@ -98,12 +107,14 @@ const SingleRecipe = () => {
 
                                             </div>
                                             <div>
-                                                <Image src={singlerecipe.image} style={{ height: "10rem", width: "10rem", borderRadius: "50%" }} />
+                                                <Image src={singlerecipe.image} style={{
+                                                    height: "10rem", width: "10rem", borderRadius: "50%", border: "2px solid grey"
+                                                }} />
                                             </div>
                                         </div>
                                     </Col>
                                     <Col md={6}>
-                                        <div style={{ backgroundColor: "#D8F0E6", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "1rem" }}>
+                                        <div style={{ backgroundColor: "#D8F0E6", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "1rem", width: "25rem", marginLeft: "2.5rem" }}>
                                             <div style={{ marginLeft: "1rem" }}>
                                                 <h4>Ingredients</h4>
                                                 <p>(Serves {singlerecipe.servings} people)</p>

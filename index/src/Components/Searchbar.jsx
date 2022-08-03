@@ -9,7 +9,7 @@ const Searchbar = ({ id }) => {
     const [query, setQuery] = useState("");
 
     useEffect(() => {
-        fetchData();
+        //   fetchData();
     }, []);
 
     useEffect(() => {
@@ -47,14 +47,14 @@ const Searchbar = ({ id }) => {
     };
 
 
-    const fetchData = async () => {
-        let response = await fetch(
-            "https://api.spoonacular.com/recipes/complexSearch?number=5219&apiKey=192717ff7b47486faf8af662e370d037", options
-        );
-        let responseData = await response.json();
-        console.log("This is search console", responseData);
-        setData(responseData.results);
-    }
+    /*  const fetchData = async () => {
+         let response = await fetch(
+             "https://api.spoonacular.com/recipes/complexSearch?number=5219&apiKey=192717ff7b47486faf8af662e370d037", options
+         );
+         let responseData = await response.json();
+         console.log("This is search console", responseData);
+         setData(responseData.results);
+     } */
 
 
     return (
