@@ -1,0 +1,44 @@
+.card_style {
+    background-color: whitesmoke;
+}
+
+.image_style {
+    border-radius: 50%;
+    position: relative;
+    height: 12rem;
+    width: 12rem;
+    top: -3rem;
+    left: 4.5rem;
+    object-fit: cover;
+    border: 2px solid grey;
+}
+
+.card_title {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card_text {
+    text-align: center;
+}
+
+.button_style {
+    background-color: #35B066;
+    border: none;
+    width: 15rem;
+}
+
+.div_button_style {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.button_style:hover {
+    background-color: #35B066;
+}
+
+.button_style:focus {
+    background-color: #35B066;
+}

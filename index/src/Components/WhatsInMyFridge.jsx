@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
-import { Form, Button, Container, Card, Col, Row, ListGroup } from 'react-bootstrap'
+import { Form, Button, Container, Card, Col, Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import '../css/WhatsInMyFridge.css'
+
 
 const WhatsInMyFridge = () => {
     const [recipes, setRecipes] = useState([])
@@ -39,7 +41,7 @@ const WhatsInMyFridge = () => {
     return (
         <>
             <div style={{ backgroundColor: "#D8F0E6" }}>
-                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingBottom: "2rem", paddingTop: "2rem" }}>
+                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingBottom: "2rem", paddingTop: "2rem", minHeight: "100vh" }}>
                     <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "2rem" }}>
                         <Row>
                             <Col xs={12}>
@@ -52,37 +54,40 @@ const WhatsInMyFridge = () => {
                                         <Form.Control type="text" placeholder="" onChange={handleChange}
                                             style={{ width: "13rem" }} />
                                     </div>
-                                    <Button style={{ backgroundColor: "#35B066", border: "none", marginTop: "1rem" }} onClick={fetchRecipes}>Get Recipes</Button>
+                                    <Button variant="success" style={{ backgroundColor: "#35B066", border: "none", marginTop: "1rem" }} onClick={fetchRecipes}>Get Recipes</Button>
                                 </Form>
 
 
                                 <Container>
-                                    <Row xs={12}>
+                                    <Row>
                                         {recipes.map((recipe) => {
                                             if (recipe.missedIngredientCount <= 2) {
                                                 return (
                                                     <>
-                                                        <Col key={recipe.id} style={{ marginTop: "2rem" }} >
-
-                                                            <Card style={{ width: '18rem' }}>
-                                                                <Card.Img variant="top" src={recipe.image} />
-                                                                <Card.Body>
-                                                                    <Card.Title>{recipe.title}</Card.Title>
-                                                                    <Card.Text>
-                                                                        <p>Used Ingredients Count: {recipe.usedIngredientCount}</p>
-                                                                        <h6>Used Ingredients</h6>
+                                                        <Col sm={4} key={recipe.id} style={{ marginTop: "4rem" }} >
+                                                            <Card className="card_style">
+                                                                <Card.Img variant="top" src={recipe.image} className="image_style" alt="Food Image" />
+                                                                <Card.Body className="card_body">
+                                                                    <h4 className="card_title">{recipe.title}</h4>
+                                                                    <hr></hr>
+                                                                    <Card.Text className="card_text">
+                                                                        <h5 style={{ marginTop: "2rem" }}>Used Ingredients</h5>
                                                                         {recipe.usedIngredients.map((used) => (
                                                                             <p>{used.name} - {used.amount} {used.unit}</p>
                                                                         ))}
-                                                                        <h6>You might also need</h6>
+
+                                                                        <h5>You might also need</h5>
                                                                         {recipe.missedIngredients.map((miss) => (
                                                                             <p>{miss.name} - {miss.amount} {miss.unit}</p>
 
                                                                         ))}
                                                                         <p>and More....</p>
+
                                                                     </Card.Text>
-                                                                    <Button style={{ backgroundColor: "#35B066", border: "none" }} onClick={() => navigate(`/SingleRecipe/${recipe.id}`)}>View Detailed Recipe</Button>
                                                                 </Card.Body>
+                                                                <div className="div_button_style">
+                                                                    <Button variant="success" className="button_style" onClick={() => navigate(`/SingleRecipe/${recipe.id}`)}>View Detailed Recipe</Button>
+                                                                </div>
                                                             </Card>
                                                         </Col>
                                                     </>

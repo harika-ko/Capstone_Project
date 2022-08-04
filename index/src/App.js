@@ -5,11 +5,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePageFinal from './Components/Pages/HomePageFinal';
 import MealPlanning from './Components/MealPlanning';
 import DailyMealPlanFinal from './Components/Pages/DailyMealPlanFinal';
-import WhatsInMyFridge from './Components/WhatsInMyFridge';
+import WhatsInMyFridgeFinal from './Components/Pages/WhatsInMyFridgeFinal';
 import SingleRecipeFinal from './Components/Pages/SingleRecipeFinal';
-import FavouritesPage from './Components/FavouritesPage';
 import WinePairing from './Components/WinePairing';
 import WeeklyMealPlanFinal from './Components/Pages/WeeklyMealPlanFinal';
+import FavoritesPageFinal from './Components/Pages/FavoritesPageFinal';
 
 function App() {
 
@@ -23,8 +23,8 @@ function App() {
           <Route path='/MealPlanning' element={<MealPlanning />} />
           <Route path='/DailyMealPlan' element={<DailyMealPlanFinal />} />
           <Route path='/WeeklyMealPlan' element={<WeeklyMealPlanFinal />} />
-          <Route path='/whats_in_my_fridge' element={<WhatsInMyFridge />} />
-          <Route path='/favourites' element={<FavouritesPage />} />
+          <Route path='/whats_in_my_fridge' element={<WhatsInMyFridgeFinal />} />
+          <Route path='/favourites' element={<FavoritesPageFinal />} />
           <Route path='/Wine_Pairing' element={<WinePairing />} />
         </Routes>
       </BrowserRouter>
