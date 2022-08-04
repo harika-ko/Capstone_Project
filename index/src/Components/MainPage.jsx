@@ -1,7 +1,7 @@
 import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap'
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import "./css/Mainpage.css"
+import "../css/Mainpage.css"
 
 function MainPage() {
 

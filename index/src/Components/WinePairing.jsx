@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 import { Form, Button, Container, Row, Col } from 'react-bootstrap'
-import "./css/WinePairing.css"
+import "../css/WinePairing.css"
 
 const WinePairing = () => {
 

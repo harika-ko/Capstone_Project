@@ -1,6 +1,6 @@
 import { Container, Row, Col, Image, Card } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import './css/MealPlanning.css'
+import '../css/MealPlanning.css'
 
 const MealPlanning = () => {
 

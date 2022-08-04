@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { Container, Col, Row, Image } from 'react-bootstrap'
 import { Heart } from "react-bootstrap-icons"
 import { useNavigate } from 'react-router-dom'
-import "./css/HomePageContent.css"
+import "../css/HomePageContent.css"
 
 function HomePageContent() {
 

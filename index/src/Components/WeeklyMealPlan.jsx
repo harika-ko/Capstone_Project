@@ -1,5 +1,7 @@
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
+import { Clock, Person } from 'react-bootstrap-icons';
+import '../css/WeeklyMealPlan.css'
 
 const WeeklyMealPlan = () => {
 
@@ -51,233 +53,297 @@ const WeeklyMealPlan = () => {
 
     return (
         <>
-            <div style={{ backgroundColor: "#D8F0E6" }}>
-                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingBottom: "2rem", paddingTop: "2rem" }}>
-                    <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "2rem" }}>
+            <div className="main-sec">
+                <div className="section-2">
+                    <Container className="container-style">
                         <Row>
-                            <Col xs={12}>
-                                <h1 style={{ fontFamily: "Helvetica Neue", textAlign: "center", color: "#34B267" }}>Your Weekly Meal Plan is here! </h1>
+                            <Col>
+                                <div class="head-class">
+                                    <h1 className="main-headingg">Your Weekly Meal Plan is here! </h1>
+                                    <Button variant="success" className="button" onClick={fetchMealPlanning}>Generate New Plan</Button>
+                                </div>
+
                                 <div>
-                                    <div>
-                                        <h3>Monday</h3>
-                                    </div>
-                                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                                    <h2 className="week-day">Monday</h2>
+                                </div>
+
+                                <Container>
+                                    <Row>
                                         {monday.map((mondaymeal) => (
                                             <>
-
-                                                <Card style={{ width: '18rem', height: '28rem' }}>
-                                                    <Card.Img variant="top" src={mondaymeal.imageUrl} alt="Food Image" />
-                                                    <Card.Body>
-                                                        <Card.Title>{mondaymeal.title}</Card.Title>
-                                                        <Card.Text>
-                                                            Preparation Time: {mondaymeal.readyInMinutes} minutes
-                                                        </Card.Text>
-                                                        <Card.Text>
-                                                            No of Servings: {mondaymeal.servings}
-                                                        </Card.Text>
-                                                        <a href={mondaymeal.sourceUrl} style={{
-                                                            backgroundColor: "#35B066", border: "none", color: "white"
-                                                            , padding: "0.4rem"
-                                                        }} target="_blank">View Recipe</a>
-                                                    </Card.Body>
-                                                </Card>
-
+                                                <Col md={4} key={mondaymeal.id}>
+                                                    <Card className="style-card">
+                                                        <Card.Img variant="top" src={mondaymeal.imageUrl} className="card-image" alt="Food Image" />
+                                                        <Card.Body className="body-card">
+                                                            <Card.Title className="card-title">{mondaymeal.title}</Card.Title>
+                                                            <hr></hr>
+                                                            <div className="class-inner">
+                                                                <div>
+                                                                    <Clock className="clock" />
+                                                                    <p className="paragraph">Time</p>
+                                                                    <h6>{mondaymeal.readyInMinutes} mins</h6>
+                                                                </div>
+                                                                <div>
+                                                                    <Person className="person" />
+                                                                    <p className="people-portion">Portion</p>
+                                                                    <h6>{mondaymeal.servings} people</h6>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                        <div class="div-button">
+                                                            <a href={mondaymeal.sourceUrl} className="recipe-button" target="_blank">View Detailed Recipe</a>
+                                                        </div>
+                                                    </Card>
+                                                </Col>
                                             </>
                                         ))}
-                                    </div>
-                                </div>
+                                    </Row>
+                                </Container>
+
 
 
                                 <div>
-                                    <div>
-                                        <h3>Tuesday</h3>
-                                    </div>
-                                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                                    <h2 className="week-day">Tuesday</h2>
+                                </div>
+
+                                <Container>
+                                    <Row>
                                         {tuesday.map((tuesdaymeal) => (
                                             <>
-
-                                                <Card style={{ width: '18rem', height: '28rem' }}>
-                                                    <Card.Img variant="top" src={tuesdaymeal.imageUrl} alt="Food Image" />
-                                                    <Card.Body>
-                                                        <Card.Title>{tuesdaymeal.title}</Card.Title>
-                                                        <Card.Text>
-                                                            Preparation Time: {tuesdaymeal.readyInMinutes} minutes
-                                                        </Card.Text>
-                                                        <Card.Text>
-                                                            No of Servings: {tuesdaymeal.servings}
-                                                        </Card.Text>
-                                                        <a href={tuesdaymeal.sourceUrl} style={{
-                                                            backgroundColor: "#35B066", border: "none", color: "white"
-                                                            , padding: "0.4rem"
-                                                        }} target="_blank">View Recipe</a>
-                                                    </Card.Body>
-                                                </Card>
-
+                                                <Col md={4} key={tuesdaymeal.id}>
+                                                    <Card className="style-card">
+                                                        <Card.Img variant="top" src={tuesdaymeal.imageUrl} className="card-image" alt="Food Image" />
+                                                        <Card.Body className="body-card">
+                                                            <Card.Title className="card-title">{tuesdaymeal.title}</Card.Title>
+                                                            <hr></hr>
+                                                            <div className="class-inner">
+                                                                <div>
+                                                                    <Clock className="clock" />
+                                                                    <p className="paragraph">Time</p>
+                                                                    <h6>{tuesdaymeal.readyInMinutes} mins</h6>
+                                                                </div>
+                                                                <div>
+                                                                    <Person className="person" />
+                                                                    <p className="people-portion">Portion</p>
+                                                                    <h6>{tuesdaymeal.servings} people</h6>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                        <div class="div-button">
+                                                            <a href={tuesdaymeal.sourceUrl} className="recipe-button" target="_blank">View Detailed Recipe</a>
+                                                        </div>
+                                                    </Card>
+                                                </Col>
                                             </>
                                         ))}
-                                    </div>
-                                </div>
+                                    </Row>
+                                </Container>
+
 
 
 
                                 <div>
-                                    <div>
-                                        <h3>Wednesday</h3>
-                                    </div>
-                                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                                    <h2 className="week-day">Wednesday</h2>
+                                </div>
+
+                                <Container>
+                                    <Row>
                                         {wednesday.map((wednesdaymeal) => (
                                             <>
-
-                                                <Card style={{ width: '18rem', height: '28rem' }}>
-                                                    <Card.Img variant="top" src={wednesdaymeal.imageUrl} alt="Food Image" />
-                                                    <Card.Body>
-                                                        <Card.Title>{wednesdaymeal.title}</Card.Title>
-                                                        <Card.Text>
-                                                            Preparation Time: {wednesdaymeal.readyInMinutes} minutes
-                                                        </Card.Text>
-                                                        <Card.Text>
-                                                            No of Servings: {wednesdaymeal.servings}
-                                                        </Card.Text>
-                                                        <a href={wednesdaymeal.sourceUrl} style={{
-                                                            backgroundColor: "#35B066", border: "none", color: "white"
-                                                            , padding: "0.4rem"
-                                                        }} target="_blank">View Recipe</a>
-                                                    </Card.Body>
-                                                </Card>
-
+                                                <Col md={4} key={wednesdaymeal.id}>
+                                                    <Card className="style-card">
+                                                        <Card.Img variant="top" src={wednesdaymeal.imageUrl} className="card-image" alt="Food Image" />
+                                                        <Card.Body className="body-card">
+                                                            <Card.Title className="card-title">{wednesdaymeal.title}</Card.Title>
+                                                            <hr></hr>
+                                                            <div className="class-inner">
+                                                                <div>
+                                                                    <Clock className="clock" />
+                                                                    <p className="paragraph">Time</p>
+                                                                    <h6>{wednesdaymeal.readyInMinutes} mins</h6>
+                                                                </div>
+                                                                <div>
+                                                                    <Person className="person" />
+                                                                    <p className="people-portion">Portion</p>
+                                                                    <h6>{wednesdaymeal.servings} people</h6>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                        <div class="div-button">
+                                                            <a href={wednesdaymeal.sourceUrl} className="recipe-button" target="_blank">View Detailed Recipe</a>
+                                                        </div>
+                                                    </Card>
+                                                </Col>
                                             </>
                                         ))}
-                                    </div>
-                                </div>
+                                    </Row>
+                                </Container>
+
 
 
 
                                 <div>
-                                    <div>
-                                        <h3>Thursday</h3>
-                                    </div>
-                                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                                    <h2 className="week-day">Thursday</h2>
+                                </div>
+
+                                <Container>
+                                    <Row>
                                         {thursday.map((thursdaymeal) => (
                                             <>
-
-                                                <Card style={{ width: '18rem', height: '28rem' }}>
-                                                    <Card.Img variant="top" src={thursdaymeal.imageUrl} alt="Food Image" />
-                                                    <Card.Body>
-                                                        <Card.Title>{thursdaymeal.title}</Card.Title>
-                                                        <Card.Text>
-                                                            Preparation Time: {thursdaymeal.readyInMinutes} minutes
-                                                        </Card.Text>
-                                                        <Card.Text>
-                                                            No of Servings: {thursdaymeal.servings}
-                                                        </Card.Text>
-                                                        <a href={thursdaymeal.sourceUrl} style={{
-                                                            backgroundColor: "#35B066", border: "none", color: "white"
-                                                            , padding: "0.4rem"
-                                                        }} target="_blank">View Recipe</a>
-                                                    </Card.Body>
-                                                </Card>
-
+                                                <Col md={4} key={thursdaymeal.id}>
+                                                    <Card className="style-card">
+                                                        <Card.Img variant="top" src={thursdaymeal.imageUrl} className="card-image" alt="Food Image" />
+                                                        <Card.Body className="body-card">
+                                                            <Card.Title className="card-title">{thursdaymeal.title}</Card.Title>
+                                                            <hr></hr>
+                                                            <div className="class-inner">
+                                                                <div>
+                                                                    <Clock className="clock" />
+                                                                    <p className="paragraph">Time</p>
+                                                                    <h6>{thursdaymeal.readyInMinutes} mins</h6>
+                                                                </div>
+                                                                <div>
+                                                                    <Person className="person" />
+                                                                    <p className="people-portion">Portion</p>
+                                                                    <h6>{thursdaymeal.servings} people</h6>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                        <div class="div-button">
+                                                            <a href={thursdaymeal.sourceUrl} className="recipe-button" target="_blank">View Detailed Recipe</a>
+                                                        </div>
+                                                    </Card>
+                                                </Col>
                                             </>
                                         ))}
-                                    </div>
-                                </div>
+                                    </Row>
+                                </Container>
+
 
 
                                 <div>
-                                    <div>
-                                        <h3>Friday</h3>
-                                    </div>
-                                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                                    <h2 className="week-day">Friday</h2>
+                                </div>
+
+                                <Container>
+                                    <Row>
                                         {friday.map((fridaymeal) => (
                                             <>
-
-                                                <Card style={{ width: '18rem', height: '28rem' }}>
-                                                    <Card.Img variant="top" src={fridaymeal.imageUrl} alt="Food Image" />
-                                                    <Card.Body>
-                                                        <Card.Title>{fridaymeal.title}</Card.Title>
-                                                        <Card.Text>
-                                                            Preparation Time: {fridaymeal.readyInMinutes} minutes
-                                                        </Card.Text>
-                                                        <Card.Text>
-                                                            No of Servings: {fridaymeal.servings}
-                                                        </Card.Text>
-                                                        <a href={fridaymeal.sourceUrl} style={{
-                                                            backgroundColor: "#35B066", border: "none", color: "white"
-                                                            , padding: "0.4rem"
-                                                        }} target="_blank">View Recipe</a>
-                                                    </Card.Body>
-                                                </Card>
-
+                                                <Col md={4} key={fridaymeal.id}>
+                                                    <Card className="style-card">
+                                                        <Card.Img variant="top" src={fridaymeal.imageUrl} className="card-image" alt="Food Image" />
+                                                        <Card.Body className="body-card">
+                                                            <Card.Title className="card-title">{fridaymeal.title}</Card.Title>
+                                                            <hr></hr>
+                                                            <div className="class-inner">
+                                                                <div>
+                                                                    <Clock className="clock" />
+                                                                    <p className="paragraph">Time</p>
+                                                                    <h6>{fridaymeal.readyInMinutes} mins</h6>
+                                                                </div>
+                                                                <div>
+                                                                    <Person className="person" />
+                                                                    <p className="people-portion">Portion</p>
+                                                                    <h6>{fridaymeal.servings} people</h6>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                        <div class="div-button">
+                                                            <a href={fridaymeal.sourceUrl} className="recipe-button" target="_blank">View Detailed Recipe</a>
+                                                        </div>
+                                                    </Card>
+                                                </Col>
                                             </>
                                         ))}
-                                    </div>
-                                </div>
+                                    </Row>
+                                </Container>
+
+
+
 
                                 <div>
-                                    <div>
-                                        <h3>Saturday</h3>
-                                    </div>
-                                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                                    <h2 className="week-day">Saturday</h2>
+                                </div>
+
+                                <Container>
+                                    <Row>
                                         {saturday.map((saturdaymeal) => (
                                             <>
-
-                                                <Card style={{ width: '18rem', height: '28rem' }}>
-                                                    <Card.Img variant="top" src={saturdaymeal.imageUrl} alt="Food Image" />
-                                                    <Card.Body>
-                                                        <Card.Title>{saturdaymeal.title}</Card.Title>
-                                                        <Card.Text>
-                                                            Preparation Time: {saturdaymeal.readyInMinutes} minutes
-                                                        </Card.Text>
-                                                        <Card.Text>
-                                                            No of Servings: {saturdaymeal.servings}
-                                                        </Card.Text>
-                                                        <a href={saturdaymeal.sourceUrl} style={{
-                                                            backgroundColor: "#35B066", border: "none", color: "white"
-                                                            , padding: "0.4rem"
-                                                        }} target="_blank">View Recipe</a>
-                                                    </Card.Body>
-                                                </Card>
-
+                                                <Col md={4} key={saturdaymeal.id}>
+                                                    <Card className="style-card">
+                                                        <Card.Img variant="top" src={saturdaymeal.imageUrl} className="card-image" alt="Food Image" />
+                                                        <Card.Body className="body-card">
+                                                            <Card.Title className="card-title">{saturdaymeal.title}</Card.Title>
+                                                            <hr></hr>
+                                                            <div className="class-inner">
+                                                                <div>
+                                                                    <Clock className="clock" />
+                                                                    <p className="paragraph">Time</p>
+                                                                    <h6>{saturdaymeal.readyInMinutes} mins</h6>
+                                                                </div>
+                                                                <div>
+                                                                    <Person className="person" />
+                                                                    <p className="people-portion">Portion</p>
+                                                                    <h6>{saturdaymeal.servings} people</h6>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                        <div class="div-button">
+                                                            <a href={saturdaymeal.sourceUrl} className="recipe-button" target="_blank">View Detailed Recipe</a>
+                                                        </div>
+                                                    </Card>
+                                                </Col>
                                             </>
                                         ))}
-                                    </div>
-                                </div>
+                                    </Row>
+                                </Container>
+
+
 
                                 <div>
-                                    <div>
-                                        <h3>Sunday</h3>
-                                    </div>
-                                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                                    <h2 className="week-day">Sunday</h2>
+                                </div>
+
+
+                                <Container>
+                                    <Row>
                                         {sunday.map((sundaymeal) => (
                                             <>
-
-                                                <Card style={{ width: '18rem', height: '28rem' }}>
-                                                    <Card.Img variant="top" src={sundaymeal.imageUrl} alt="Food Image" />
-                                                    <Card.Body>
-                                                        <Card.Title>{sundaymeal.title}</Card.Title>
-                                                        <Card.Text>
-                                                            Preparation Time: {sundaymeal.readyInMinutes} minutes
-                                                        </Card.Text>
-                                                        <Card.Text>
-                                                            No of Servings: {sundaymeal.servings}
-                                                        </Card.Text>
-                                                        <a href={sundaymeal.sourceUrl} style={{
-                                                            backgroundColor: "#35B066", border: "none", color: "white"
-                                                            , padding: "0.4rem"
-                                                        }} target="_blank">View Recipe</a>
-                                                    </Card.Body>
-                                                </Card>
-
+                                                <Col md={4} key={sundaymeal.id}>
+                                                    <Card className="style-card">
+                                                        <Card.Img variant="top" src={sundaymeal.imageUrl} className="card-image" alt="Food Image" />
+                                                        <Card.Body className="body-card">
+                                                            <Card.Title className="card-title">{sundaymeal.title}</Card.Title>
+                                                            <hr></hr>
+                                                            <div className="class-inner">
+                                                                <div>
+                                                                    <Clock className="clock" />
+                                                                    <p className="paragraph">Time</p>
+                                                                    <h6>{sundaymeal.readyInMinutes} mins</h6>
+                                                                </div>
+                                                                <div>
+                                                                    <Person className="person" />
+                                                                    <p className="people-portion">Portion</p>
+                                                                    <h6>{sundaymeal.servings} people</h6>
+                                                                </div>
+                                                            </div>
+                                                        </Card.Body>
+                                                        <div class="div-button">
+                                                            <a href={sundaymeal.sourceUrl} className="recipe-button" target="_blank">View Detailed Recipe</a>
+                                                        </div>
+                                                    </Card>
+                                                </Col>
                                             </>
                                         ))}
-                                    </div>
-                                </div>
+                                    </Row>
+                                </Container >
+
 
                             </Col>
                         </Row>
                     </Container>
-                </div>
-            </div>
+                </div >
+            </div >
         </>
     )
 }

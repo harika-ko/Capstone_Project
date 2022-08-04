@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { Clock, Person } from 'react-bootstrap-icons';
-import './css/DailyMealPlan.css'
+import '../css/DailyMealPlan.css'
 
 const DailyMealPlan = () => {
 
@@ -53,7 +53,7 @@ const DailyMealPlan = () => {
                                         <Form.Control type="number" placeholder="Calories (e.g. 2000)" onChange={handleChange}
                                             style={{ width: "13rem" }} />
                                     </div>
-                                    <Button style={{ backgroundColor: "#35B066", border: "none", marginTop: "1rem" }} onClick={() => {
+                                    <Button variant="success" style={{ backgroundColor: "#35B066", border: "none", marginTop: "1rem" }} onClick={() => {
                                         fetchMealPlanning();
 
                                     }}>Get Daily Meal Plan</Button>

@@ -1,6 +1,8 @@
-.container-style {
+.cont-style {
     overflow: hidden;
     font-family: "sansSerif";
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .main-nav {
@@ -14,4 +16,8 @@
 
 .text-size {
     font-size: 1.4rem;
+}
+
+.Link:hover {
+    text-decoration: none;
 }
