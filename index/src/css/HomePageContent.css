@@ -1,9 +1,9 @@
 .side-image {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    height: 20rem;
-    position: relative;
-    top: 15rem;
+    height: 23rem;
+    position: absolute;
+    bottom: 0rem;
 }
 
 .main-content {
@@ -13,8 +13,8 @@
 .main-head {
     font-family: "sansSerif";
     margin-top: 3rem;
-    text-align: center;
     font-size: 4rem;
+    text-align: center;
 }
 
 .head2 {
@@ -31,11 +31,12 @@
 
 .ratings-main-class {
     display: flex;
+    justify-content: center;
 }
 
 .rating1 {
     background-color: #D8F0E6;
-    width: 14rem;
+    width: 16rem;
     margin-top: 4rem;
 }
 
@@ -55,29 +56,27 @@
     margin-left: 1.5rem;
 }
 
-.burger-image {
-    height: 35rem;
+.burger_container {
+    background-image: url('https://st3.depositphotos.com/1020618/15071/i/600/depositphotos_150716786-stock-photo-big-tasty-burger-with-flying.jpg');
+    background-position: 108% center;
     overflow: hidden;
-    width: 25rem;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-@media only screen and (max-width: 1285px) {
-    .burger-image {
-        width: 18rem;
+@media only screen and (max-width: 1286px) {
+    .burger_container {
+        background-image: none;
     }
 }
 
-@media only screen and (max-width:1084px) {
-    .burger-image {
+@media only screen and (max-width: 1212px) {
+    .side-image {
         display: none;
     }
 }
 
 @media only screen and (max-width: 890px) {
-    .side-image {
-        display: none;
-    }
-
     .main-head {
         font-size: 2rem;
     }

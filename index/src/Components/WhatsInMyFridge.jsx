@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
-import { Form, Button, Container, Card, Col, Row } from 'react-bootstrap'
+import { Form, Button, Container, Card, Col, Row, Image } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import fridge from '../Assets/fridge.png'
 import '../css/WhatsInMyFridge.css'
 
 
@@ -40,24 +41,33 @@ const WhatsInMyFridge = () => {
 
     return (
         <>
-            <div style={{ backgroundColor: "#D8F0E6" }}>
-                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingBottom: "2rem", paddingTop: "2rem", minHeight: "100vh" }}>
+            <div className="first_div_cont">
+                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingBottom: "2rem", paddingTop: "2rem" }}>
                     <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "2rem" }}>
                         <Row>
-                            <Col xs={12}>
+                            <Col>
+                                <div style={{ display: "flex" }}>
+                                    <div>
 
-                                <h1 style={{ textAlign: "center", color: "#34B267" }}>Get Recipes with Ingredients available!</h1>
+                                        <h1 style={{ textAlign: "center", color: "#34B267" }}>Get Recipes with Ingredients Available!</h1>
+                                        <h4 style={{ textAlign: "center", marginTop: "2rem" }}>List all the Ingredients available in your fridge right now<br></br>
+                                            and get new recipes to make! </h4>
+                                        <Form style={{ marginTop: "2rem", textAlign: "center" }}>
+                                            <div style={{ display: "flex", justifyContent: "center" }}>
+                                                <Form.Label style={{ fontWeight: "bold", fontSize: "1.3rem", marginRight: "1rem" }}>Enter the Ingredients</Form.Label>
+                                                <Form.Control type="text" placeholder="" onChange={handleChange}
+                                                    style={{ width: "13rem" }} />
+                                            </div>
+                                            <Button variant="success" style={{ backgroundColor: "#35B066", border: "none", marginTop: "1rem" }} onClick={fetchRecipes}>Get Recipes</Button>
+                                        </Form>
 
-                                <Form style={{ marginTop: "2rem", textAlign: "center" }}>
-                                    <div style={{ display: "flex", justifyContent: "center" }}>
-                                        <Form.Label style={{ fontWeight: "bold", fontSize: "1.3rem", marginRight: "1rem" }}>Enter the Ingredients</Form.Label>
-                                        <Form.Control type="text" placeholder="" onChange={handleChange}
-                                            style={{ width: "13rem" }} />
                                     </div>
-                                    <Button variant="success" style={{ backgroundColor: "#35B066", border: "none", marginTop: "1rem" }} onClick={fetchRecipes}>Get Recipes</Button>
-                                </Form>
 
+                                    <div>
 
+                                        <Image src={fridge} style={{ height: "25rem", width: "20rem" }} />
+                                    </div>
+                                </div>
                                 <Container>
                                     <Row>
                                         {recipes.map((recipe) => {

@@ -40,18 +40,15 @@ function HomePageContent() {
         <>
             <div style={{ backgroundColor: "#D8F0E6" }}>
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
-                    <Container fluid style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "1rem" }}>
+                    <Container fluid className="burger_container" style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "1rem" }}>
                         <Row>
-                            <Col sm={2}>
-                                <Image src="https://i.pinimg.com/564x/33/18/a1/3318a17fd65fece85966b4453bef69df.jpg" className="side-image" alt="image" />
-                            </Col>
-
-                            <Col sm={6}>
+                            <Image src="https://i.pinimg.com/564x/33/18/a1/3318a17fd65fece85966b4453bef69df.jpg" className="side-image" alt="image" />
+                            <Col sm={12} class="offset-md-2">
                                 <div className="main-content">
                                     <h1 className="main-head">Let's Start Cooking Now!</h1>
                                     <h5 class="head2">Want to learn cooking but don't know how?<br />
                                         Explore recipes from a wide range of cuisines at FoodMood</h5>
-                                    <h5 className="head3" style={{ marginTop: "3rem", color: "grey", textAlign: "center" }}>Want to eat Nutritious food?<br />
+                                    <h5 className="head3">Want to eat Nutritious food?<br />
                                         No Problem, try our state of the art Meal Planner</h5>
 
                                     <div className="ratings-main-class">
@@ -117,10 +114,6 @@ function HomePageContent() {
                                     </div>
                                 </div>
                             </Col>
-                            <Col sm={4}>
-                                <Image src="https://st3.depositphotos.com/1020618/15071/i/600/depositphotos_150716786-stock-photo-big-tasty-burger-with-flying.jpg"
-                                    className="burger-image" alt="Burger Image" />
-                            </Col>
                         </Row>
                     </Container>
                 </div>
@@ -133,25 +126,26 @@ function HomePageContent() {
                         <h1 className="ml-3" style={{ fontFamily: "sansSerif", marginBottom: "1.5rem", textAlign: "center" }}>Popular Food</h1>
                         <h5 style={{ marginTop: "1rem", color: "grey", textAlign: "center", marginBottom: "2rem" }}>We provide a variety of food and beverage recipes <br />
                             with high taste from famous chefs</h5>
-                        <Row className="ml-0">
+                        <Row className="ml-0 justify-content-center">
                             {popularrecipes.slice(1, 5).map((recipe) => (
                                 <Col xs={12} md={3} key={recipe.id}>
-                                    <Image src={recipe.image} alt="image" onClick={() => navigate(`/SingleRecipe/${recipe.id}`)} style={{
-                                        borderRadius: "50%", height: "10rem", width: "10rem",
+                                    <div className="d-flex flex-column align-items-center px-4"><Image src={recipe.image} alt="image" onClick={() => navigate(`/SingleRecipe/${recipe.id}`)} style={{
+                                        borderRadius: "50%", height: "10rem", width: "10rem", marginBottom: "1rem",
                                         objectFit: "cover"
                                     }} />
-                                    {/* <p style={{ textAlign: "center" }}>{recipe.title}</p> */}
+                                        <p class="text-center" style={{ fontSize: ".9rem", fontWeight: 600, color: "#4f5a56" }}>{recipe.title}</p>
+                                    </div>
                                 </Col>))}
 
-                            {popularrecipes.slice(6, 10).map((recipes) => (
+                            {popularrecipes.slice(6, 9).map((recipes) => (
                                 <Col xs={12} md={3} key={recipes.id}>
-                                    <Image src={recipes.image} alt="image"
+                                    <div className="d-flex flex-column align-items-center px-4"><Image src={recipes.image} alt="image"
                                         onClick={() => navigate(`/SingleRecipe/${recipes.id}`)}
                                         style={{
                                             borderRadius: "50%", height: "10rem", width: "10rem",
-                                            objectFit: "cover", marginTop: "2rem", marginLeft: "6rem", marginBottom: "2rem"
+                                            objectFit: "cover", marginTop: "2rem", marginBottom: "1rem"
                                         }} />
-                                    {/* <p style={{ marginBottom: "2rem", marginLeft: "1rem" }}>{recipes.title}</p> */}
+                                        <p class="text-center" style={{ fontSize: ".9rem", fontWeight: 600, color: "#4f5a56" }}>{recipes.title}</p></div>
                                 </Col>
                             ))}
                         </Row>

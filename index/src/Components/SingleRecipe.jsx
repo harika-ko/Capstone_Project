@@ -67,8 +67,8 @@ const SingleRecipe = () => {
 
     return (
         <>
-            <div style={{ backgroundColor: "#D8F0E6" }}>
-                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingTop: "2rem", minHeight: "100vh" }}>
+            <div style={{ backgroundColor: "#D8F0E6", minHeight: 'calc(100vh - 74px)' }}>
+                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingTop: "2rem" }}>
                     <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingLeft: "3rem" }}>
                         <h1 style={{ fontFamily: "Helvetica Neue" }}>Recipe Details</h1>
                         <Row>

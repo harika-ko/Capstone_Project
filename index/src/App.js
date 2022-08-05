@@ -7,9 +7,9 @@ import MealPlanning from './Components/MealPlanning';
 import DailyMealPlanFinal from './Components/Pages/DailyMealPlanFinal';
 import WhatsInMyFridgeFinal from './Components/Pages/WhatsInMyFridgeFinal';
 import SingleRecipeFinal from './Components/Pages/SingleRecipeFinal';
-import WinePairing from './Components/WinePairing';
 import WeeklyMealPlanFinal from './Components/Pages/WeeklyMealPlanFinal';
 import FavoritesPageFinal from './Components/Pages/FavoritesPageFinal';
+import WinePairingFinal from './Components/Pages/WinePairingFinal';
 
 function App() {
 
@@ -25,7 +25,7 @@ function App() {
           <Route path='/WeeklyMealPlan' element={<WeeklyMealPlanFinal />} />
           <Route path='/whats_in_my_fridge' element={<WhatsInMyFridgeFinal />} />
           <Route path='/favourites' element={<FavoritesPageFinal />} />
-          <Route path='/Wine_Pairing' element={<WinePairing />} />
+          <Route path='/Wine_Pairing' element={<WinePairingFinal />} />
         </Routes>
       </BrowserRouter>
     </div>

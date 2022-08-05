@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom'
-import { Form, Button, Container, Row, Col } from 'react-bootstrap'
+import { Form, Button, Container, Row, Col, Image } from 'react-bootstrap'
 import "../css/WinePairing.css"
 
 const WinePairing = () => {
@@ -8,7 +7,6 @@ const WinePairing = () => {
     const [wine, setWine] = useState([])
     const [food, setFood] = useState([])
     const [text, setText] = useState("")
-    const [matchpro, setMatchPro] = useState([])
     const [hasfood, setHasFood] = useState(false)
 
     function handleChange(e) {
@@ -35,47 +33,61 @@ const WinePairing = () => {
         console.log("This is Wine pairing get console", responseData);
         setWine(responseData.pairedWines)
         setText(responseData.pairingText)
-        setMatchPro(responseData.productMatches[0])
-        console.log(matchpro)
     }
 
     return (
         <>
 
 
-            <div style={{ backgroundColor: "#D8F0E6" }}>
-                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingBottom: "2rem", paddingTop: "2rem" }}>
-                    <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "2rem" }}>
+            <div class="first-cont">
+                <div className="second_container">
+                    <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "1rem" }}>
                         <Row>
-                            <Col xs={12}>
+                            <Col>
+                                <div style={{ display: "flex" }}>
+                                    <div xs={6}>
+                                        <h1 style={{ textAlign: "center", color: "#34B267" }}>Wine Pairing</h1>
+                                        <h4 className="sub-head">Find a wine that goes well with a food.<br></br>
+                                            Food can be a Dish name, an Ingredient name, or a Cuisine!</h4>
 
-                                <h1 style={{ textAlign: "center", color: "#34B267" }}>Wine Pairing</h1>
 
-                                <h4>Find a wine that goes well with a food.
-                                    Food can be a Dish name, an Ingredient name, or a Cuisine!</h4>
-                                <Form style={{ marginTop: "2rem", textAlign: "center" }}>
-                                    <div style={{ display: "flex", justifyContent: "center" }}>
-                                        <Form.Label style={{ fontWeight: "bold", fontSize: "1.3rem", marginRight: "1rem" }}>Enter the Food</Form.Label>
-                                        <Form.Control type="text" placeholder="" onChange={handleChange}
-                                            style={{ width: "13rem" }} />
+                                        <div>
+                                            <Form style={{ marginTop: "2rem", textAlign: "center" }}>
+                                                <div style={{ display: "flex", justifyContent: "center" }}>
+                                                    <Form.Label style={{ fontWeight: "bold", fontSize: "1.3rem", marginRight: "1rem" }}>Enter the Food</Form.Label>
+                                                    <Form.Control type="text" placeholder="" onChange={handleChange} className="input-text"
+                                                        style={{ width: "13rem" }} />
+                                                </div>
+                                                <Button variant="success" style={{ backgroundColor: "#35B066", border: "none", marginTop: "1rem" }} onClick={() => { fetchWine(); setHasFood(true); }}>Get Suggestions</Button>
+                                            </Form>
+                                        </div>
                                     </div>
-                                    <Button style={{ backgroundColor: "#35B066", border: "none", marginTop: "1rem" }} onClick={() => { fetchWine(); setHasFood(true); }}>Get Suggestions</Button>
-                                </Form>
+                                    <div xs={6}>
+                                        <Image src="https://img.freepik.com/premium-photo/red-wine-pouring-glass-isolated-white-background_488220-3735.jpg"
+                                            style={{ height: "20rem", width: "20rem", marginLeft: "7rem" }} />
+                                    </div>
+                                </div>
+
+
+
+
+
+
 
 
                                 <Container>
                                     <Row>
                                         {hasfood ? (
                                             <Col className="result-container">
-                                                <h5 className="head1">Wine Suggestions for {food}</h5>
+                                                <h4 className="head1">Wine Suggestions for {food}</h4>
                                                 {wine && wine.map((wine) => (
-                                                    <div className="cont">
+                                                    <div className="list_cont">
                                                         <ul className="list-container">
                                                             <li className="list">{wine} </li>
                                                         </ul>
                                                     </div>
                                                 ))}
-                                                < h5 className="head1"> Description </h5>
+                                                < h4 className="head1"> Description </h4>
                                                 <p className="list">{text}</p>
                                             </Col>) : ("")
                                         }
