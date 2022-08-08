@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image, Card } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import '../css/MealPlanning.css'
 
@@ -20,29 +20,26 @@ const MealPlanning = () => {
                 <div className="main-section">
                     <Container className="container">
                         <h1 className="main-heading">Do your Meal Planning here!</h1>
-                        <Row>
-
+                        <Row className="row_cont">
                             <div className="div-1">
-                                <Col md={6}>
+                                <Col sm={6}>
                                     <div className="content-img">
                                         <div class="image1" onClick={goToDailyMealPlanPage}></div>
                                         <p className="text">CLICK HERE</p>
-                                        <h5 className="head1">Plan your Meal for a whole <span style={{ color: "#34B267" }}>DAY</span> here</h5>
-                                        <p className="paragraph">Enter the number of Calories and get your day meal plan within that</p>
+                                        <h5 className="head1">DAILY MEAL PLAN</h5>
+                                        <p className="parag">Enter the number of Calories and get your day meal plan within that</p>
                                     </div>
                                 </Col>
 
-                                <Col md={6}>
+                                <Col sm={6}>
                                     <div className="content-img-2" >
                                         <div class="image2" onClick={goToWeeklyMealPlanPage}></div>
                                         <p className="text2">CLICK HERE</p>
-                                        <h5 className="head1">Plan your Meal for a whole <span style={{ color: "#34B267" }}>WEEK</span> here.</h5>
-                                        <p className="paragraph">Get a Random Meal Plan generated for your whole week and enjoy it</p>
+                                        <h5 className="head1">RANDOM WEEKLY MEAL PLAN</h5>
+                                        <p className="parag">Get a Random Meal Plan generated for your whole week and enjoy it</p>
                                     </div>
                                 </Col>
                             </div>
-
-
                         </Row>
                     </Container>
                 </div>

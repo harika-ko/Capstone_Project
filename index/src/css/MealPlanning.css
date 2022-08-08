@@ -117,6 +117,10 @@
     .div-1 {
         flex-direction: column;
     }
+
+    .row_cont {
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 768px) {

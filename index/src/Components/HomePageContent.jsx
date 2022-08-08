@@ -51,6 +51,8 @@ function HomePageContent() {
                                     <h5 className="head3">Want to eat Nutritious food?<br />
                                         No Problem, try our state of the art Meal Planner</h5>
 
+
+
                                     <div className="ratings-main-class">
                                         <div className="rating1">
                                             <div className="rating2">
@@ -67,7 +69,7 @@ function HomePageContent() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p style={{ fontSize: "0.8rem" }}>Bread, Strawberries, Jam, Orange<br /> Kiwi, Blueberries</p>
+                                                <p style={{ fontSize: "0.8rem" }}>Bread, Strawberries, Jam, Orange, Kiwi, Blueberries</p>
                                             </div>
                                         </div>
 
@@ -87,7 +89,7 @@ function HomePageContent() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p style={{ fontSize: "0.8rem" }}>Eggs, Milk, Flour, Butter,<br /> Cocoa, Sugar, Chocolate chips</p>
+                                                <p style={{ fontSize: "0.8rem" }}>Eggs, Milk, Flour, Butter, Cocoa, Sugar, Chocolate chips</p>
                                             </div>
                                         </div>
 
@@ -108,11 +110,12 @@ function HomePageContent() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p style={{ fontSize: "0.8rem" }}>Eggs, Milk, Flour, Butter,<br /> Salt, Sugar, Strawberries</p>
+                                                <p style={{ fontSize: "0.8rem" }}>Eggs, Milk, Flour, Butter, Salt, Sugar, Strawberries</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                             </Col>
                         </Row>
                     </Container>
