@@ -65,7 +65,7 @@ const WhatsInMyFridge = () => {
 
                                     <div>
 
-                                        <Image src={fridge} style={{ height: "25rem", width: "20rem" }} />
+                                        <Image src={fridge} style={{ height: "25rem", width: "20rem" }} className='fridge_pic' />
                                     </div>
                                 </div>
                                 <Container>
@@ -74,7 +74,7 @@ const WhatsInMyFridge = () => {
                                             if (recipe.missedIngredientCount <= 2) {
                                                 return (
                                                     <>
-                                                        <Col sm={4} key={recipe.id} style={{ marginTop: "4rem" }} >
+                                                        <Col md={4} key={recipe.id} style={{ marginTop: "4rem" }} >
                                                             <Card className="card_style">
                                                                 <Card.Img variant="top" src={recipe.image} className="image_style" alt="Food Image" />
                                                                 <Card.Body className="card_body">

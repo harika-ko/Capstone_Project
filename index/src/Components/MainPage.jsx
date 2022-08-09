@@ -23,13 +23,13 @@ function MainPage() {
 
 
     return (
-        <div className="hero">
-            <div className="main">
-                <Container className="main-container">
+        <div className="hero_sec">
+            <div className="main_sec">
+                <Container className="main_cont">
                     <Row xs={12}>
                         <Col className="col-style">
-                            <h1 className="main-heading">Food<span style={{ color: "#34B267" }}>Mood</span></h1>
-                            <h1 style={{ fontFamily: "sansSerif" }} className="mt-4">No.1 Platform <br />For All Food <br />Related Content</h1>
+                            <h1 className="main_head">Food<span style={{ color: "#34B267" }}>Mood</span></h1>
+                            <h1 className="mt-4">No.1 Platform <br />For All Food <br />Related Content</h1>
                             <p>Want to cook yummy recipes which are also healthy? </p>
                             <p>No need to worry!</p>
 
@@ -50,8 +50,8 @@ function MainPage() {
                                         className="form-control" />
                                 </div>
                                 <div style={{ marginTop: "0.9rem" }}>
-                                    <Button className="register-button" >Register</Button>
-                                    <Button className="login-button" onClick={goToHomePage}>Login</Button>
+                                    <Button variant="success" className="register-button" >Register</Button>
+                                    <Button variant="success" className="login-button" onClick={goToHomePage}>Login</Button>
 
                                 </div>
                             </Form>

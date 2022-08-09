@@ -26,8 +26,10 @@ const MealPlanning = () => {
                                     <div className="content-img">
                                         <div class="image1" onClick={goToDailyMealPlanPage}></div>
                                         <p className="text">CLICK HERE</p>
-                                        <h5 className="head1">DAILY MEAL PLAN</h5>
-                                        <p className="parag">Enter the number of Calories and get your day meal plan within that</p>
+                                        <div className="content_text">
+                                            <h5 className="head1">DAILY MEAL PLAN</h5>
+                                            <p className="parag">Enter the number of Calories and get your meal plan for a day</p>
+                                        </div>
                                     </div>
                                 </Col>
 
@@ -35,8 +37,10 @@ const MealPlanning = () => {
                                     <div className="content-img-2" >
                                         <div class="image2" onClick={goToWeeklyMealPlanPage}></div>
                                         <p className="text2">CLICK HERE</p>
-                                        <h5 className="head1">RANDOM WEEKLY MEAL PLAN</h5>
-                                        <p className="parag">Get a Random Meal Plan generated for your whole week and enjoy it</p>
+                                        <div className='content_text'>
+                                            <h5 className="head1">RANDOM WEEKLY MEAL PLAN</h5>
+                                            <p className="parag">Get a Random Meal Plan generated for your whole week here</p>
+                                        </div>
                                     </div>
                                 </Col>
                             </div>

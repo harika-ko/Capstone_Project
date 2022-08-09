@@ -40,12 +40,12 @@ const DailyMealPlan = () => {
 
     return (
         <>
-            <div style={{ backgroundColor: "#D8F0E6" }}>
+            <div className='daily_main-cont' style={{ backgroundColor: "#D8F0E6" }}>
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
                     <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem" }}>
                         <Row>
                             <Col>
-                                <h1 style={{ fontFamily: "Helvetica Neue", textAlign: "center", color: "#34B267" }}>Do your Daily Meal Plan here! </h1>
+                                <h1 style={{ textAlign: "center", color: "#34B267" }}>Do your Daily Meal Plan here! </h1>
 
                                 <Form style={{ marginTop: "2rem", textAlign: "center" }}>
                                     <div style={{ display: "flex", justifyContent: "center" }}>
@@ -64,7 +64,7 @@ const DailyMealPlan = () => {
                                     <Row>
                                         {mealData.map((meal) => (
                                             <>
-                                                <Col md={4} key={meal.id} style={{ marginTop: "5rem" }} >
+                                                <Col sm={12} md={4} key={meal.id} style={{ marginTop: "5rem" }} >
                                                     <Card className="card-style">
                                                         <Card.Img variant="top" src={meal.imageUrl} className="image" alt="Food Image" />
                                                         <Card.Body className="card-body">

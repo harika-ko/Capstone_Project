@@ -19,7 +19,7 @@ const NavBar = () => {
                                 <Link to="/MealPlanning" className="Link">
                                     <div
                                         className={
-                                            location.pathname === '/MealPlanning' ? 'nav-link active' : 'nav-link'
+                                            location.pathname === '/DailyMealPlan' ? 'nav-link active' : 'nav-link'
                                         }
                                     >Meal Planning</div>
                                 </Link>
@@ -41,9 +41,6 @@ const NavBar = () => {
                                         location.pathname === '/favourites' ? 'nav-link active' : 'nav-link'
                                     }>My Favorites</div>
                                 </Link>
-
-
-
                             </Nav>
                             <Form inline>
                                 <Searchbar />

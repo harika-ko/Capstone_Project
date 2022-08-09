@@ -1,25 +1,27 @@
-.hero {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap');
+
+.hero_sec {
     background-color: #D8F0E6;
+    min-height: 100vh;
+    font-family: 'Noto Sans', sans-serif;
 }
 
-.main {
-    padding-top: 3.5rem;
-    padding-bottom: 3.2rem;
+.main_sec {
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
 }
 
-.main-container {
+.main_cont {
     background-color: white;
     border-radius: 1rem;
 }
 
 .col-style {
     margin-left: 2.5rem;
-    margin-top: 1rem;
-    margin-bottom: 2.5rem;
+    margin-top: 0.5rem;
 }
 
-.main-heading {
-    font-family: "Helvetica Neue";
+.main_head {
     font-weight: "bold";
 }
 

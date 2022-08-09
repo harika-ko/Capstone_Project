@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap');
+
+
+.daily_main-cont {
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .image {
     border-radius: 50%;
     position: relative;
@@ -18,6 +25,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    height: 30px;
 }
 
 .card-body {
@@ -79,4 +87,33 @@
     background-color: whitesmoke;
     padding: 2rem;
     border-radius: 1rem;
+}
+
+
+@media only screen and (max-width:1200px) {
+    .image {
+        height: 9rem;
+        width: 9rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .image {
+        height: 7rem;
+        width: 7rem;
+        left: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card-style {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    .image {
+        height: 9rem;
+        width: 9rem;
+        left: 3.5rem;
+    }
 }

@@ -35,7 +35,6 @@
 .button_style {
     background-color: #35B066;
     border: none;
-    width: 15rem;
 }
 
 .div_button_style {
@@ -49,4 +48,37 @@
 
 .button_style:focus {
     background-color: #35B066;
+}
+
+
+@media only screen and (max-width:1200px) {
+    .image_style {
+        height: 9rem;
+        width: 9rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .image_style {
+        height: 7rem;
+        width: 7rem;
+        left: 2.5rem;
+    }
+
+    .fridge_pic {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card_style {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    .image_style {
+        height: 9rem;
+        width: 9rem;
+        left: 3.5rem;
+    }
 }

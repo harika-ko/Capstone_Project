@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap');
+
 .hero {
     background-color: #D8F0E6;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .main-section {
@@ -17,13 +20,13 @@
 }
 
 .main-heading {
-    font-family: 'Helvetica Neue';
     color: #34B267;
     text-align: center;
 }
 
 .div-1 {
     display: flex;
+    gap: 1rem;
     margin-top: 3rem;
     margin-left: 3rem;
 }
@@ -50,7 +53,6 @@
     z-index: 1;
     background-repeat: no-repeat;
     background-position: center center;
-    margin-left: 2rem;
 }
 
 .content-img .text {
@@ -121,6 +123,11 @@
     .row_cont {
         justify-content: center;
     }
+
+    .content_text {
+        display: inline-block;
+        width: 500px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -132,5 +139,10 @@
     .image2 {
         height: 10rem;
         width: 20rem;
+    }
+
+    .content_text {
+        display: block;
+        width: 300px;
     }
 }
