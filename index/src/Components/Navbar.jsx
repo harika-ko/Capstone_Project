@@ -1,9 +1,15 @@
-import { Navbar, Nav, Form, Container, Row, Col } from "react-bootstrap"
-import { Link, useLocation } from 'react-router-dom'
-import Searchbar from "./Searchbar"
-import "../css/Navbar.css"
+import { Navbar, Nav, Form, Container, Row, Col } from "react-bootstrap";
+import { Link, useLocation } from 'react-router-dom';
+import Searchbar from "./Searchbar";
+import "../css/Navbar.css";
+import { BoxArrowRight } from "react-bootstrap-icons";
+import fire from "../fire";
 
 const NavBar = () => {
+
+    const handleLogout = () => {
+        fire.auth().signOut();
+    };
 
     const location = useLocation()
 
@@ -42,9 +48,14 @@ const NavBar = () => {
                                     }>My Favorites</div>
                                 </Link>
                             </Nav>
-                            <Form inline>
-                                <Searchbar />
-                            </Form>
+                            <div style={{ display: "flex", gap: "0.7rem", alignItems: "center" }}>
+                                <Form inline>
+                                    <Searchbar />
+                                </Form>
+                                <div className="logout-div">
+                                    <BoxArrowRight onClick={handleLogout} />
+                                </div>
+                            </div>
                         </Navbar.Collapse>
                     </Navbar>
                 </Col>

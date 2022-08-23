@@ -1,6 +1,5 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import MainPage from './Components/MainPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePageFinal from './Components/Pages/HomePageFinal';
 import MealPlanning from './Components/MealPlanning';
@@ -10,6 +9,7 @@ import SingleRecipeFinal from './Components/Pages/SingleRecipeFinal';
 import WeeklyMealPlanFinal from './Components/Pages/WeeklyMealPlanFinal';
 import FavoritesPageFinal from './Components/Pages/FavoritesPageFinal';
 import WinePairingFinal from './Components/Pages/WinePairingFinal';
+import Login from './Components/Pages/LoginPage';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<MainPage />} />
+          <Route path='/' element={<Login />} />
           <Route path='/HomePageFinal' element={<HomePageFinal />} />
           <Route path='/SingleRecipe/:id' element={<SingleRecipeFinal />} />
           <Route path='/MealPlanning' element={<MealPlanning />} />

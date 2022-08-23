@@ -41,8 +41,8 @@ function HomePageContent() {
             <div style={{ backgroundColor: "#D8F0E6" }}>
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
                     <Container fluid className="burger_container" style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "1rem" }}>
+                        <Image src="https://i.pinimg.com/564x/33/18/a1/3318a17fd65fece85966b4453bef69df.jpg" className="side-image" alt="image" />
                         <Row>
-                            <Image src="https://i.pinimg.com/564x/33/18/a1/3318a17fd65fece85966b4453bef69df.jpg" className="side-image" alt="image" />
                             <Col sm={12} class="offset-md-2">
                                 <div className="main-content">
                                     <h1 className="main-head">Let's Start Cooking Now!</h1>
@@ -50,7 +50,6 @@ function HomePageContent() {
                                         Explore recipes from a wide range of cuisines at FoodMood</h5>
                                     <h5 className="head3">Want to eat Nutritious food?<br />
                                         No Problem, try our state of the art Meal Planner</h5>
-
 
 
                                     <div className="ratings-main-class">

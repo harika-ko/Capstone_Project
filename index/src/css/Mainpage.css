@@ -33,17 +33,14 @@
     width: 20rem;
 }
 
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
 .register-button {
     background-color: #35B066;
     border: none;
-    margin-right: 2rem;
-}
-
-.login-button {
-    background-color: #35B066;
-    border: none;
-}
-
-.login-button:hover {
-    background-color: #6caf87;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }

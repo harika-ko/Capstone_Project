@@ -69,6 +69,10 @@
     .burger_container {
         background-image: none;
     }
+
+    .side-image {
+        left: 0rem;
+    }
 }
 
 @media only screen and (max-width: 1212px) {
