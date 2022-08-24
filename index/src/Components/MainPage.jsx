@@ -1,5 +1,3 @@
-import "../css/Mainpage.css"
-
 const MainPage = (props) => {
 
     const { email, setEmail, password, setPassword, handleLogin, handleSignup, hasAccount, setHasAccount, emailError, passwordError } = props;

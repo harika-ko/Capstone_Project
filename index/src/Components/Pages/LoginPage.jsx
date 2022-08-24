@@ -2,7 +2,8 @@ import fire from "../../fire";
 import { auth } from "firebase";
 import { useState, useEffect } from "react";
 import HomePageFinal from '../Pages/HomePageFinal'
-import { Container, Row, Col, Button, Image, Form } from 'react-bootstrap'
+import { Container, Row, Col, Image, Form } from 'react-bootstrap'
+import "../../css/Mainpage.css";
 
 const Login = () => {
     const [user, setUser] = useState("");

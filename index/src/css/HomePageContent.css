@@ -6,10 +6,6 @@
     bottom: 0rem;
 }
 
-.main-content {
-    margin-left: 2rem;
-}
-
 .main-head {
     font-family: "sansSerif";
     margin-top: 3rem;
@@ -52,10 +48,6 @@
     width: 3rem;
     border-radius: 50%;
 }
-
-/* .rate {
-    margin-left: 1.5rem;
-} */
 
 .burger_container {
     background-image: url('https://st3.depositphotos.com/1020618/15071/i/600/depositphotos_150716786-stock-photo-big-tasty-burger-with-flying.jpg');

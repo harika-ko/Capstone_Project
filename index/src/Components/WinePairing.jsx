@@ -64,16 +64,9 @@ const WinePairing = () => {
                                     </div>
                                     <div xs={6}>
                                         <Image src="https://img.freepik.com/premium-photo/red-wine-pouring-glass-isolated-white-background_488220-3735.jpg"
-                                            style={{ height: "20rem", width: "20rem", marginLeft: "7rem" }} />
+                                            style={{ height: "20rem", width: "20rem", marginLeft: "7rem" }} className="winepic" />
                                     </div>
                                 </div>
-
-
-
-
-
-
-
 
                                 <Container>
                                     <Row>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { InputGroup, Form, ListGroup } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+import "../css/Searchbar.css";
 
 const Searchbar = ({ id }) => {
     const [data, setData] = useState([])
@@ -9,7 +10,7 @@ const Searchbar = ({ id }) => {
     const [query, setQuery] = useState("");
 
     useEffect(() => {
-        //   fetchData();
+        fetchData();
     }, []);
 
     useEffect(() => {
@@ -47,14 +48,14 @@ const Searchbar = ({ id }) => {
     };
 
 
-    /*  const fetchData = async () => {
-         let response = await fetch(
-             "https://api.spoonacular.com/recipes/complexSearch?number=5219&apiKey=192717ff7b47486faf8af662e370d037", options
-         );
-         let responseData = await response.json();
-         console.log("This is search console", responseData);
-         setData(responseData.results);
-     } */
+    const fetchData = async () => {
+        let response = await fetch(
+            "https://api.spoonacular.com/recipes/complexSearch?number=5219&apiKey=192717ff7b47486faf8af662e370d037", options
+        );
+        let responseData = await response.json();
+        console.log("This is search console", responseData);
+        setData(responseData.results);
+    }
 
 
     return (
@@ -87,6 +88,7 @@ const Searchbar = ({ id }) => {
                             <ListGroup className="search-list">
                                 <div>
                                     <Link
+                                        className="search-link"
                                         onClick={() => {
                                             setQuery("");
                                             setFilteredData([]);
@@ -115,7 +117,7 @@ const Searchbar = ({ id }) => {
                                                 style={{ color: "black", fontSize: "14px" }}
                                                 onClick={goToSingleRecipe}
                                             >
-                                                <strong>{data.title}</strong>
+                                                <strong className="search-title">{data.title}</strong>
                                             </span>
                                         </ListGroup.Item>
                                     </Link>
