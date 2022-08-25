@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { Container, Col, Row, Image } from 'react-bootstrap'
 import { Heart } from "react-bootstrap-icons"
 import { useNavigate } from 'react-router-dom'
+import plant from '../Assets/plant.jpeg'
 import "../css/HomePageContent.css"
 
 function HomePageContent() {
@@ -41,7 +42,7 @@ function HomePageContent() {
             <div style={{ backgroundColor: "#D8F0E6" }}>
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
                     <Container fluid className="burger_container" style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "1rem" }}>
-                        <Image src="https://i.pinimg.com/564x/33/18/a1/3318a17fd65fece85966b4453bef69df.jpg" className="side-image" alt="image" />
+                        <Image src={plant} className="side-image" alt="image" />
                         <Row>
                             <Col sm={12} class="offset-md-2">
                                 <div className="main-content">

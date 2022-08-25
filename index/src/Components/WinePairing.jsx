@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Form, Button, Container, Row, Col, Image } from 'react-bootstrap'
+import winepic from '../Assets/wine.jpg';
 import "../css/WinePairing.css"
 
 const WinePairing = () => {
@@ -63,7 +64,7 @@ const WinePairing = () => {
                                         </div>
                                     </div>
                                     <div xs={6}>
-                                        <Image src="https://img.freepik.com/premium-photo/red-wine-pouring-glass-isolated-white-background_488220-3735.jpg"
+                                        <Image src={winepic}
                                             style={{ height: "20rem", width: "20rem", marginLeft: "7rem" }} className="winepic" />
                                     </div>
                                 </div>

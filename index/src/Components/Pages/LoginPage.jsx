@@ -2,7 +2,8 @@ import fire from "../../fire";
 import { auth } from "firebase";
 import { useState, useEffect } from "react";
 import HomePageFinal from '../Pages/HomePageFinal'
-import { Container, Row, Col, Image, Form } from 'react-bootstrap'
+import { Container, Row, Col, Image, Form } from 'react-bootstrap';
+import food1 from '../../Assets/food_1.jpeg';
 import "../../css/Mainpage.css";
 
 const Login = () => {
@@ -151,7 +152,7 @@ const Login = () => {
                                     </div>
 
                                 </Col>
-                                <Image src="https://media.istockphoto.com/photos/fried-pork-and-vegetables-on-white-background-picture-id1190330112?k=20&m=1190330112&s=612x612&w=0&h=_TrmthJupdqYmMU-NC-es85TEvaBJsynDS383hqiAvM=" style={{
+                                <Image src={food1} style={{
                                     height: "500px",
                                     width: "500px",
                                     overflow: "hidden",
