@@ -95,7 +95,7 @@ const Login = () => {
                                     <h1 className="mt-4">No.1 Platform <br />For All Food <br />Related Content</h1>
                                     <p>Want to cook yummy recipes which are also healthy? </p>
                                     <p>No need to worry!</p>
-                                    {hasAccount ? <h4>LOG IN</h4> : <h4>SIGN UP</h4>}
+                                    {hasAccount ? <h4 className="sign">LOG IN</h4> : <h4 className="sign">SIGN UP</h4>}
                                     <div style={{ marginTop: "1rem" }}>
                                         <Form.Label className="form-label" >Email Address</Form.Label>
                                         <Form.Control
@@ -123,7 +123,7 @@ const Login = () => {
                                     <div className="btnContainer" style={{ marginTop: "0.9rem" }}>
                                         {hasAccount ? (
                                             <>
-                                                <p>
+                                                <p className="account">
                                                     Don't have an Account ?{" "}
                                                     <span onClick={() => setHasAccount(!hasAccount)} style={{ color: "#34B267", cursor: "pointer" }}>
                                                         Sign up
