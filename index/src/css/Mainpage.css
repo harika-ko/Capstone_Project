@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap');
 
 .hero_sec {
     background-color: #D8F0E6;
     min-height: 100vh;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Jost', sans-serif;
 }
 
 .main_sec {
@@ -48,6 +48,11 @@
     margin-bottom: 0.25rem;
 }
 
+input::placeholder {
+    font-size: 0.8rem;
+    color: #63b995 !important;
+}
+
 .account {
     font-size: 0.8rem;
 }
@@ -64,6 +69,6 @@
 .register-button {
     background-color: #35B066;
     border: none;
-    padding: 0.5rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 0.5rem;
 }

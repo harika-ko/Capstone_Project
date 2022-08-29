@@ -38,7 +38,7 @@ function HomePageContent() {
 
 
     return (
-        <>
+        <div className="homefinal">
             <div style={{ backgroundColor: "#D8F0E6" }}>
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
                     <Container fluid className="burger_container" style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "1rem" }}>
@@ -155,7 +155,7 @@ function HomePageContent() {
                     </Container>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

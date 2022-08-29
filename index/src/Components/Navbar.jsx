@@ -47,6 +47,12 @@ const NavBar = () => {
                                         location.pathname === '/favourites' ? 'nav-link active' : 'nav-link'
                                     }>My Favorites</div>
                                 </Link>
+
+                                <Link to='/ImageUpload' className="Link">
+                                    <div className={
+                                        location.pathname === '/ImageUpload' ? 'nav-link active' : 'nav-link'
+                                    }>Image Upload</div>
+                                </Link>
                             </Nav>
                             <div style={{ display: "flex", gap: "0.7rem", alignItems: "center" }}>
                                 <Form inline>

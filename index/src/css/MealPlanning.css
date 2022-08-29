@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap');
 
 .hero {
     background-color: #D8F0E6;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
 }
 
 .main-section {

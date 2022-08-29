@@ -76,9 +76,9 @@ const WinePairing = () => {
                                                 <h4 className="head1">Wine Suggestions for {food}</h4>
                                                 {wine && wine.map((wine) => (
                                                     <div className="list_cont">
-                                                        <ul className="list-container">
-                                                            <li className="list">{wine} </li>
-                                                        </ul>
+                                                        <div className="list-container">
+                                                            <p className="list">{wine}</p>
+                                                        </div>
                                                     </div>
                                                 ))}
                                                 < h4 className="head1"> Description </h4>

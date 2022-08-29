@@ -2,6 +2,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import { HeartFill } from "react-bootstrap-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFavourite } from "../redux/actions";
+import "../css/Favorites.css";
 
 const FavouritesPage = () => {
 
@@ -9,10 +10,10 @@ const FavouritesPage = () => {
 
     const dispatch = useDispatch();
     return (
-        <div style={{ backgroundColor: "#D8F0E6" }}>
+        <div className="main-favorites" style={{ backgroundColor: "#D8F0E6" }}>
             <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", minHeight: "100vh", paddingBottom: "2rem" }}>
                 <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem" }}>
-                    <h1 style={{ fontFamily: "Helvetica Neue", textAlign: "center", color: "#35B066", marginBottom: "2rem" }}>My Favourite Recipes</h1>
+                    <h1 style={{ textAlign: "center", color: "#35B066", marginBottom: "2rem" }}>My Favourite Recipes</h1>
                     <Row>
                         {favourites !== null &&
                             favourites.map((singlerecipe, i) => (

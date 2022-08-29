@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap');
 
 
 .first-cont {
     background-color: #D8F0E6;
     min-height: calc(100vh - 74px);
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Jost', sans-serif;
 }
 
 .sub-head {
