@@ -8,6 +8,7 @@ const DailyMealPlan = () => {
     const [mealData, setMealData] = useState([])
     const [nutrients, setNutrients] = useState({})
     const [calories, setCalories] = useState(2000)
+    const [food, setFood] = useState(false)
 
     function handleChange(e) {
         setCalories(e.target.value)
@@ -55,14 +56,14 @@ const DailyMealPlan = () => {
                                     </div>
                                     <Button variant="success" style={{ backgroundColor: "#35B066", border: "none", marginTop: "1rem" }} onClick={() => {
                                         fetchMealPlanning();
-
+                                        setFood(true);
                                     }}>Get Daily Meal Plan</Button>
 
                                 </Form>
 
                                 <Container>
                                     <Row>
-                                        {mealData.map((meal) => (
+                                        {food && mealData.map((meal) => (
                                             <>
                                                 <Col sm={12} md={4} key={meal.id} style={{ marginTop: "5rem" }} >
                                                     <Card className="card-style">
@@ -93,13 +94,15 @@ const DailyMealPlan = () => {
                                     </Row>
                                 </Container>
 
-                                <div className="nutrients-div" style={{ textAlign: "center", marginTop: "2rem" }}>
-                                    <h4 style={{ color: "#35B066" }}>Total Amount of Nutrients you gain in a Day according to the Meal Plan</h4>
-                                    <p style={{ marginTop: "1rem" }}><b>Calories</b>: {nutrients.calories}</p>
-                                    <p><b>Proteins</b>: {nutrients.protein}</p>
-                                    <p><b>Fat</b>: {nutrients.fat}</p>
-                                    <p><b>Carbohydrates</b>: {nutrients.carbohydrates}</p>
-                                </div>
+                                {food ? (
+                                    <div className="nutrients-div" style={{ textAlign: "center", marginTop: "2rem" }}>
+                                        <h4 style={{ color: "#35B066" }}>Total Amount of Nutrients you gain in a Day according to the Meal Plan</h4>
+                                        <p style={{ marginTop: "1rem" }}><b>Calories</b>: {nutrients.calories}</p>
+                                        <p><b>Proteins</b>: {nutrients.protein}</p>
+                                        <p><b>Fat</b>: {nutrients.fat}</p>
+                                        <p><b>Carbohydrates</b>: {nutrients.carbohydrates}</p>
+                                    </div>) : ("")
+                                }
                             </Col>
                         </Row>
                     </Container>
