@@ -10,7 +10,7 @@ import WeeklyMealPlanFinal from './Components/Pages/WeeklyMealPlanFinal';
 import FavoritesPageFinal from './Components/Pages/FavoritesPageFinal';
 import WinePairingFinal from './Components/Pages/WinePairingFinal';
 import Login from './Components/Pages/LoginPage';
-import ImageUpload from './Components/ImageUpload';
+import AccountPage from './Components/Pages/AccountPage';
 
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
           <Route path='/whats_in_my_fridge' element={<WhatsInMyFridgeFinal />} />
           <Route path='/favourites' element={<FavoritesPageFinal />} />
           <Route path='/Wine_Pairing' element={<WinePairingFinal />} />
-          <Route path='/ImageUpload' element={<ImageUpload />} />
+          <Route path='/Account' element={<AccountPage />} />
         </Routes>
       </BrowserRouter>
     </div>
