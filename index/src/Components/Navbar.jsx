@@ -2,7 +2,7 @@ import { Navbar, Nav, Form, Container, Row, Col } from "react-bootstrap";
 import { Link, useLocation } from 'react-router-dom';
 import Searchbar from "./Searchbar";
 import "../css/Navbar.css";
-import { BoxArrowRight } from "react-bootstrap-icons";
+import { CaretDownFill } from "react-bootstrap-icons";
 import fire from "../fire";
 
 const NavBar = () => {
@@ -41,25 +41,20 @@ const NavBar = () => {
                                         location.pathname === '/Wine_Pairing' ? 'nav-link active' : 'nav-link'
                                     }>Wine Pairing</div>
                                 </Link>
-
-                                <Link to='/favourites' className="Link">
-                                    <div className={
-                                        location.pathname === '/favourites' ? 'nav-link active' : 'nav-link'
-                                    }>My Favorites</div>
-                                </Link>
-
-                                <Link to='/Account' className="Link">
-                                    <div className={
-                                        location.pathname === '/Account' ? 'nav-link active' : 'nav-link'
-                                    }>Account</div>
-                                </Link>
                             </Nav>
                             <div style={{ display: "flex", gap: "0.7rem", alignItems: "center" }}>
                                 <Form inline>
                                     <Searchbar />
                                 </Form>
-                                <div className="logout-div">
-                                    <BoxArrowRight onClick={handleLogout} />
+
+
+                                <div className="dropdown">
+                                    <CaretDownFill />
+                                    <div className="dropdown-content">
+                                        <a href="/Account">My Profile</a>
+                                        <a href="/favourites">My Favorites</a>
+                                        <a href="#" onClick={handleLogout}>Sign Out</a>
+                                    </div>
                                 </div>
                             </div>
                         </Navbar.Collapse>

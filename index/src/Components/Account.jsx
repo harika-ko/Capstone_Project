@@ -3,6 +3,7 @@ import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
 import { PencilFill, GeoAlt } from "react-bootstrap-icons";
 import { storage } from '../fire';
 import "../css/Account.css";
+import Spinner from 'react-bootstrap/Spinner';
 
 export default function Account() {
     const [file, setFile] = useState(null);
@@ -10,6 +11,7 @@ export default function Account() {
     const [show, setShow] = useState(false);
     const [show1, setShow1] = useState(false);
     const [showImage, setShowImage] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     const [details, setDetails] = useState({
         firstname: "",
@@ -30,6 +32,7 @@ export default function Account() {
         e.preventDefault();
         const file = e.target[0].files[0];
         uploadFiles(file);
+
     }
 
     const changeDetails = async (e) => {
@@ -40,7 +43,6 @@ export default function Account() {
     const uploadFiles = (file) => {
         const uploadTask = storage.ref(`files/${file.name}`).put(file);
         uploadTask.on('state_changed', snapshot => {
-
         },
             (error) => console.log(error),
             () => {
@@ -49,6 +51,7 @@ export default function Account() {
                     .getDownloadURL()
                     .then((url) => {
                         setURL(url);
+                        setIsLoading(false);
                     })
             }
 
@@ -58,8 +61,8 @@ export default function Account() {
     return (
         <div className="account-main-cont">
             <div style={{ backgroundColor: "#D8F0E6", minHeight: 'calc(100vh - 74px)' }}>
-                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingTop: "2rem" }}>
-                    <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingLeft: "3rem" }}>
+                <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingTop: "2rem", paddingBottom: "2rem" }}>
+                    <Container className="account-container">
                         <Row>
                             <Col>
 
@@ -71,6 +74,7 @@ export default function Account() {
                                         </form>
                                         {url !== "" ? <img src={url} width="180" height="180" onClick={handleShow} className="profile-pic" /> :
                                             <img src="https://rentkh.com/assets/avatar.jpeg" width="180" height="180" onClick={handleShow} className="profile-pic" />}
+                                        {isLoading && <Spinner animation="grow" variant="success" className="spinner" />}
                                     </div>
                                     <div className="heading-info">
                                         <h4>{details.firstname || details.lastname !== "" ? <h4>{details.firstname} {details.lastname}</h4> : "Harika Kommuri"}</h4>
@@ -119,7 +123,7 @@ export default function Account() {
                                         onChange={(e) => setShowImage(e.target.files[0])}
                                         className="profile-pic-file"
                                     />
-                                    <Button variant="success" onClick={handleClose} type="submit" className="profile-pic-button">
+                                    <Button variant="success" onClick={() => { handleClose(); setIsLoading(true); }} type="submit" className="profile-pic-button">
                                         Change Profile Picture
                                     </Button>
                                 </form>

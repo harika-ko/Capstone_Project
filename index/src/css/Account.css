@@ -4,6 +4,14 @@
     font-family: 'Jost', sans-serif;
 }
 
+.account-container {
+    max-width: 58rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-left: 3rem;
+}
+
 .account-main-head {
     color: rgb(52, 178, 103);
     text-align: center;
@@ -15,6 +23,12 @@
     margin-right: auto;
     display: block;
     border-radius: 50%;
+}
+
+.spinner {
+    position: absolute;
+    top: 9rem;
+    left: 27rem;
 }
 
 .heading-info {
@@ -54,7 +68,7 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     max-width: 600px;
-    margin-left: 18rem;
+    margin-left: 10rem;
     border-radius: 2rem;
     padding-right: 5rem;
 }
@@ -86,7 +100,7 @@
 .details-pencil {
     position: absolute;
     top: 23rem;
-    right: 15rem;
+    right: 10rem;
 }
 
 .details-modal-title {

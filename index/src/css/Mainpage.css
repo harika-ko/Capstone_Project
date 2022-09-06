@@ -72,3 +72,7 @@ input::placeholder {
     padding: 0.5rem 1.5rem;
     border-radius: 0.5rem;
 }
+
+.first-para {
+    margin-bottom: 0;
+}

@@ -91,7 +91,7 @@ const Login = () => {
                         <Container className="main_cont">
                             <Row xs={12}>
                                 <Col className="col-style">
-                                    <h2 className="main_head">Food<span style={{ color: "#34B267" }}>Mood</span></h2>
+                                    <h2 className="main_head">Food<span style={{ color: "#34B267", fontWeight: "bold" }}>Mood</span></h2>
                                     <h1 className="mt-4">No.1 Platform <br />For All Food <br />Related Content</h1>
                                     <p className="first-para">Want to cook yummy recipes which are also healthy? </p>
                                     <p className="second-para">No need to worry!</p>
