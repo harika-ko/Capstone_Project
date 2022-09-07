@@ -10,6 +10,7 @@
 .sub-head {
     text-align: center;
     margin-top: 1rem;
+    font-size: 1.4rem;
 }
 
 .input-text:focus {
@@ -28,27 +29,57 @@
     color: #34B267;
 }
 
-.list_cont {
-    text-align: center;
-}
-
-.list-container {
-    display: table;
-    margin: 0 auto;
-    text-align: left;
-}
-
 .list {
     font-size: 1.2rem;
     font-weight: 500;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #0e680e;
 }
 
 .second_container {
     padding: 2rem 1rem 1rem 1.3rem;
 }
 
+.wine1 {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 0.5rem;
+    border: 1px solid grey;
+    box-shadow: 3px 5px 5px grey;
+}
+
+.head-des {
+    text-align: center;
+    color: #34B267;
+    margin-top: 2rem;
+}
+
+.para-des {
+    column-count: 3;
+    font-size: 1.1rem;
+}
+
 @media only screen and (max-width: 991px) {
     .winepic {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .wine1 {
+        height: 8rem;
+        width: 8rem;
+    }
+}
+
+@media only screen and (max-width: 514px) {
+    .wine1 {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .list {
+        font-size: 0.9rem;
     }
 }

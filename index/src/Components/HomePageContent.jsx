@@ -126,7 +126,7 @@ function HomePageContent() {
             <div style={{ backgroundColor: "#D8F0E6" }}>
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
                     <Container fluid style={{ backgroundColor: "whitesmoke", borderRadius: "1rem", paddingTop: "1rem" }}>
-                        <h1 className="ml-3" style={{ fontFamily: "sansSerif", marginBottom: "1.5rem", textAlign: "center" }}>Popular Food</h1>
+                        <h1 className="ml-3" style={{ marginBottom: "1.5rem", textAlign: "center" }}>Popular Food</h1>
                         <h5 style={{ marginTop: "1rem", color: "grey", textAlign: "center", marginBottom: "2rem" }}>We provide a variety of food and beverage recipes <br />
                             with high taste from famous chefs</h5>
                         <Row className="ml-0 justify-content-center">

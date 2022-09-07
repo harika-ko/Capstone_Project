@@ -5,6 +5,7 @@ import Searchbar from './Searchbar'
 import { addFavourite, removeFavourite } from "../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
 import { Heart, HeartFill } from "react-bootstrap-icons";
+import "../css/SingleRecipe.css";
 
 
 const SingleRecipe = () => {
@@ -67,10 +68,10 @@ const SingleRecipe = () => {
 
     return (
         <>
-            <div style={{ backgroundColor: "#D8F0E6", minHeight: 'calc(100vh - 74px)' }}>
+            <div className="single-recipe-main-cont" style={{ backgroundColor: "#D8F0E6", minHeight: 'calc(100vh - 74px)' }}>
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem", paddingTop: "2rem" }}>
                     <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingLeft: "3rem" }}>
-                        <h1 style={{ fontFamily: "Helvetica Neue" }}>Recipe Details</h1>
+                        <h1>Recipe Details</h1>
                         <Row>
                             {singlerecipe && (
                                 <>
@@ -81,7 +82,7 @@ const SingleRecipe = () => {
                                                     fontWeight: "Bold", textTransform: "capitalize", color: "#35B066",
                                                 }}>{dish}</p>
 
-                                                <h3 style={{ fontFamily: "Helvetica Neue", display: "inline" }}>{singlerecipe.title}</h3>
+                                                <h3 style={{ display: "inline" }}>{singlerecipe.title}</h3>
                                                 <div style={{ display: "inline", marginLeft: "1rem" }}>
                                                     {isFav ? (
                                                         <HeartFill
@@ -108,7 +109,7 @@ const SingleRecipe = () => {
                                             </div>
                                             <div>
                                                 <Image src={singlerecipe.image} style={{
-                                                    height: "10rem", width: "10rem", borderRadius: "50%", border: "2px solid grey"
+                                                    height: "10rem", width: "10rem", borderRadius: "50%", border: "2px solid grey", objectFit: "cover"
                                                 }} />
                                             </div>
                                         </div>

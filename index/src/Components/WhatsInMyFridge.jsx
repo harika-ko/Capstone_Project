@@ -49,14 +49,14 @@ const WhatsInMyFridge = () => {
                                 <div style={{ display: "flex" }}>
                                     <div>
 
-                                        <h1 style={{ textAlign: "center", color: "#34B267" }}>Get Recipes with Ingredients Available!</h1>
-                                        <h4 style={{ textAlign: "center", marginTop: "2rem" }}>List all the Ingredients available in your fridge right now<br></br>
+                                        <h1 style={{ textAlign: "center", color: "#34B267" }}>What's in my Fridge?</h1>
+                                        <h4 style={{ textAlign: "center", marginTop: "2rem", fontSize: "1.4rem" }}>List all the Ingredients available in your fridge right now<br></br>
                                             and get new recipes to make! </h4>
                                         <Form style={{ marginTop: "2rem", textAlign: "center" }}>
                                             <div style={{ display: "flex", justifyContent: "center" }}>
                                                 <Form.Label style={{ fontWeight: "bold", fontSize: "1.3rem", marginRight: "1rem" }}>Enter the Ingredients</Form.Label>
-                                                <Form.Control type="text" placeholder="" onChange={handleChange}
-                                                    style={{ width: "13rem" }} />
+                                                <Form.Control type="text" placeholder="Enter items seperated with Comma (,)" onChange={handleChange}
+                                                    style={{ width: "15rem" }} />
                                             </div>
                                             <Button variant="success" style={{ backgroundColor: "#35B066", border: "none", marginTop: "1rem" }} onClick={fetchRecipes}>Get Recipes</Button>
                                         </Form>
@@ -65,7 +65,7 @@ const WhatsInMyFridge = () => {
 
                                     <div>
 
-                                        <Image src={fridge} style={{ height: "25rem", width: "20rem" }} className='fridge_pic' />
+                                        <Image src={fridge} style={{ height: "25rem", width: "20rem", marginLeft: "9rem" }} className='fridge_pic' />
                                     </div>
                                 </div>
                                 <Container>

@@ -83,11 +83,75 @@
 }
 
 .nutrients-div {
+    margin-left: 20rem;
+    max-width: fit-content;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     background-color: whitesmoke;
     padding: 2rem;
     border-radius: 1rem;
+}
+
+.calory-div {
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.calory {
+    height: 2rem;
+    width: 2rem;
+}
+
+.calory-text {
+    display: inline;
+}
+
+.protein-div {
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.proteins {
+    height: 2rem;
+    width: 2rem;
+}
+
+.protein-text {
+    display: inline;
+}
+
+.fat-div {
+    margin-right: 2.5rem;
+    margin-top: 0.5rem;
+}
+
+.fat {
+    height: 2rem;
+    width: 2rem;
+}
+
+.fat-text {
+    display: inline;
+}
+
+.carbo-div {
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+}
+
+.carbo {
+    height: 2rem;
+    width: 2rem;
+}
+
+.carbo-text {
+    display: inline;
+}
+
+.dflex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 
@@ -95,6 +159,11 @@
     .image {
         height: 9rem;
         width: 9rem;
+    }
+
+    .nutrients-div {
+        margin-right: 10rem;
+        margin-left: 13rem;
     }
 }
 
@@ -116,5 +185,10 @@
         height: 9rem;
         width: 9rem;
         left: 3.5rem;
+    }
+
+    .nutrients-div {
+        margin-left: 0rem;
+        margin-right: 0rem;
     }
 }

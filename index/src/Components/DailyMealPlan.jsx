@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Card, Image } from "react-bootstrap";
 import { Clock, Person } from 'react-bootstrap-icons';
-import '../css/DailyMealPlan.css'
+import calory from "../Assets/calories.png";
+import proteins from "../Assets/proteins.png";
+import fats from "../Assets/trans-fat.png";
+import carbo from "../Assets/bread.png";
+import '../css/DailyMealPlan.css';
 
 const DailyMealPlan = () => {
 
@@ -95,12 +99,24 @@ const DailyMealPlan = () => {
                                 </Container>
 
                                 {food ? (
-                                    <div className="nutrients-div" style={{ textAlign: "center", marginTop: "2rem" }}>
-                                        <h4 style={{ color: "#35B066" }}>Total Amount of Nutrients you gain in a Day according to the Meal Plan</h4>
-                                        <p style={{ marginTop: "1rem" }}><b>Calories</b>: {nutrients.calories}</p>
-                                        <p><b>Proteins</b>: {nutrients.protein}</p>
-                                        <p><b>Fat</b>: {nutrients.fat}</p>
-                                        <p><b>Carbohydrates</b>: {nutrients.carbohydrates}</p>
+                                    <div className="nutrients-div">
+                                        <h4 style={{ color: "#35B066" }}>Total Amount of Nutrients Gained in a Day</h4>
+                                        <div className="calory-div">
+                                            <Image src={calory} alt="calories pic" className="calory" />
+                                            <p className="calory-text"><b>Calories</b>: {nutrients.calories}</p>
+                                        </div>
+                                        <div className="protein-div">
+                                            <Image src={proteins} alt="proteins pic" className="proteins" />
+                                            <p className="protein-text"><b>Proteins</b>: {nutrients.protein}</p>
+                                        </div>
+                                        <div className="fat-div">
+                                            <Image src={fats} alt="fat pic" className="fat" />
+                                            <p className="fat-text"><b>Fat</b>: {nutrients.fat}</p>
+                                        </div>
+                                        <div className="dflex carbo-div">
+                                            <Image src={carbo} alt="carbohydrates pic" className="carbo" />
+                                            <p className="carbo-text"><b>Carbohydrates</b>: {nutrients.carbohydrates}</p>
+                                        </div>
                                     </div>) : ("")
                                 }
                             </Col>

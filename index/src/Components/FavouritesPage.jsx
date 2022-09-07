@@ -33,7 +33,7 @@ const FavouritesPage = () => {
                                             <div>
                                                 <Image src={singlerecipe.image} alt="image" style={{
                                                     borderRadius: "50%",
-                                                    height: "8rem", width: "8rem", display: "block", marginTop: "1rem"
+                                                    height: "8rem", width: "8rem", display: "block", marginTop: "1rem", objectFit: "cover"
                                                 }}></Image>
                                             </div>
                                             <HeartFill
