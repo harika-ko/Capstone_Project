@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import plant from '../Assets/plant.jpeg'
 import "../css/HomePageContent.css"
 
-function HomePageContent() {
+const HomePageContent = () => {
 
     const [popularrecipes, setPopularRecipes] = useState([])
 
@@ -41,7 +41,7 @@ function HomePageContent() {
         <div className="homefinal">
             <div style={{ backgroundColor: "#D8F0E6" }}>
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
-                    <Container fluid className="burger_container" style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "1rem" }}>
+                    <Container fluid className="burger_container">
                         <Image src={plant} className="side-image" alt="image" />
                         <Row>
                             <Col sm={12} class="offset-md-2">
@@ -125,8 +125,8 @@ function HomePageContent() {
 
             <div style={{ backgroundColor: "#D8F0E6" }}>
                 <div style={{ paddingLeft: "1.3rem", paddingRight: "1rem" }}>
-                    <Container fluid style={{ backgroundColor: "whitesmoke", borderRadius: "1rem", paddingTop: "1rem" }}>
-                        <h1 className="ml-3" style={{ marginBottom: "1.5rem", textAlign: "center" }}>Popular Food</h1>
+                    <Container fluid className="popular-container" >
+                        <h1 className="ml-3" style={{ marginTop: "1rem", marginBottom: "1.5rem", textAlign: "center" }}>Popular Food</h1>
                         <h5 style={{ marginTop: "1rem", color: "grey", textAlign: "center", marginBottom: "2rem" }}>We provide a variety of food and beverage recipes <br />
                             with high taste from famous chefs</h5>
                         <Row className="ml-0 justify-content-center">
@@ -148,7 +148,7 @@ function HomePageContent() {
                                             borderRadius: "50%", height: "10rem", width: "10rem",
                                             objectFit: "cover", marginTop: "2rem", marginBottom: "1rem"
                                         }} />
-                                        <p class="text-center" style={{ fontSize: ".9rem", fontWeight: 600, color: "#4f5a56" }}>{recipes.title}</p></div>
+                                        <p class="text-center" style={{ fontSize: ".9rem", fontWeight: 600, color: "#4f5a56", marginBottom: "2rem" }}>{recipes.title}</p></div>
                                 </Col>
                             ))}
                         </Row>

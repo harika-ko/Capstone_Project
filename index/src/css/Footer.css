@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap');
+
+footer {
+    font-family: 'Jost', sans-serif;
+    background-color: whitesmoke;
+}
+
+.footer-main-head {
+    margin-top: 1.5rem;
+    margin-left: 5rem;
+    color: black;
+    font-size: 2rem;
+}
+
+.footer-cont {
+    background-color: whitesmoke;
+    padding-top: 1rem;
+    padding-left: 3rem;
+}
+
+.mood-text {
+    color: rgb(52, 178, 103);
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer .ft-link {
+    text-decoration: none;
+    color: rgb(100, 96, 96);
+    line-height: 1.8rem;
+}
+
+.ft-link:hover {
+    text-decoration: none;
+    color: rgb(77, 73, 73);
+    font-weight: bold;
+}
+
+.ft-title {
+    color: black;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+.ft-main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft-main-list {
+    padding: 1.25rem;
+    min-width: 12.5rem;
+}
+
+.ft-copyright {
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    text-align: right;
+}
+
+.ft-social-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft-social-list li {
+    margin: 0.1rem 0.6rem;
+    white-space: nowrap;
+}
+
+
+@media only screen and (min-width: 480px) {
+    .ft-main {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ft-main {
+        justify-content: space-evenly;
+    }
+}

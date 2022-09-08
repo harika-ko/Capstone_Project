@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
+import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import { PencilFill, GeoAlt } from "react-bootstrap-icons";
 import { storage } from '../fire';
 import "../css/Account.css";
@@ -12,6 +12,7 @@ export default function Account() {
     const [show1, setShow1] = useState(false);
     const [showImage, setShowImage] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+
 
     const [details, setDetails] = useState({
         firstname: "",

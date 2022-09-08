@@ -22,7 +22,7 @@ const NavBar = () => {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto text-size" >
-                                <Link to="/MealPlanning" className="Link">
+                                <Link to="/MealPlanning" className="nav-data">
                                     <div
                                         className={
                                             location.pathname === '/DailyMealPlan' ? 'nav-link active' : 'nav-link'
@@ -30,13 +30,13 @@ const NavBar = () => {
                                     >Meal Planning</div>
                                 </Link>
 
-                                <Link to="/whats_in_my_fridge" className="Link">
+                                <Link to="/whats_in_my_fridge" className="nav-data">
                                     <div className={
                                         location.pathname === '/whats_in_my_fridge' ? 'nav-link active' : 'nav-link'
                                     }>What's in my fridge</div>
                                 </Link>
 
-                                <Link to='/Wine_Pairing' className="Link">
+                                <Link to='/Wine_Pairing' className="nav-data">
                                     <div className={
                                         location.pathname === '/Wine_Pairing' ? 'nav-link active' : 'nav-link'
                                     }>Wine Pairing</div>
