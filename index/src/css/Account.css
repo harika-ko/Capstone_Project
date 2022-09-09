@@ -27,8 +27,9 @@
 
 .spinner {
     position: absolute;
-    top: 9rem;
-    left: 27rem;
+    top: 5rem;
+    left: 25rem;
+    color: rgb(3, 80, 3);
 }
 
 .heading-info {

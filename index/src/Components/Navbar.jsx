@@ -25,20 +25,20 @@ const NavBar = () => {
                                 <Link to="/MealPlanning" className="nav-data">
                                     <div
                                         className={
-                                            location.pathname === '/DailyMealPlan' ? 'nav-link active' : 'nav-link'
+                                            location.pathname === '/DailyMealPlan' ? 'nav-link active underline' : 'nav-link'
                                         }
                                     >Meal Planning</div>
                                 </Link>
 
                                 <Link to="/whats_in_my_fridge" className="nav-data">
                                     <div className={
-                                        location.pathname === '/whats_in_my_fridge' ? 'nav-link active' : 'nav-link'
+                                        location.pathname === '/whats_in_my_fridge' ? 'nav-link active underline' : 'nav-link'
                                     }>What's in my fridge</div>
                                 </Link>
 
                                 <Link to='/Wine_Pairing' className="nav-data">
                                     <div className={
-                                        location.pathname === '/Wine_Pairing' ? 'nav-link active' : 'nav-link'
+                                        location.pathname === '/Wine_Pairing' ? 'nav-link active underline' : 'nav-link'
                                     }>Wine Pairing</div>
                                 </Link>
                             </Nav>
@@ -53,7 +53,7 @@ const NavBar = () => {
                                     <div className="dropdown-content">
                                         <a href="/Account">My Profile</a>
                                         <a href="/favourites">My Favorites</a>
-                                        <a href="#" onClick={handleLogout}>Sign Out</a>
+                                        <a href="/" onClick={handleLogout}>Sign Out</a>
                                     </div>
                                 </div>
                             </div>

@@ -8,9 +8,12 @@
 }
 
 .sub-head {
-    text-align: center;
     margin-top: 1rem;
     font-size: 1.4rem;
+}
+
+.wp-text-div {
+    padding-left: 2.5rem;
 }
 
 .input-text:focus {
@@ -24,9 +27,11 @@
     border-radius: 1rem;
 }
 
-.head1 {
+.wine-head {
+    margin-top: 1.5rem;
     text-align: center;
     color: #34B267;
+    margin-bottom: 2.5rem;
 }
 
 .list {
@@ -34,7 +39,6 @@
     font-weight: 500;
     text-transform: uppercase;
     font-style: italic;
-    color: #0e680e;
 }
 
 .second_container {
@@ -49,10 +53,17 @@
     box-shadow: 3px 5px 5px grey;
 }
 
+.winepic {
+    height: 20rem;
+    width: 22rem;
+    margin-left: 7rem;
+}
+
 .head-des {
     text-align: center;
     color: #34B267;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .para-des {
@@ -60,9 +71,34 @@
     font-size: 1.1rem;
 }
 
+.wine-text-list {
+    display: flex;
+    margin-left: 10rem;
+    gap: 12.5rem;
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .wine-text-list {
+        margin-left: 7rem;
+        gap: 9.5rem;
+    }
+
+    .winepic {
+        height: 15rem;
+        width: 15rem;
+    }
+}
+
+
 @media only screen and (max-width: 991px) {
     .winepic {
         display: none;
+    }
+
+    .wine-text-list {
+        margin-left: 3rem;
+        gap: 6rem;
     }
 }
 
@@ -70,6 +106,36 @@
     .wine1 {
         height: 8rem;
         width: 8rem;
+    }
+
+    .wine-text-list {
+        margin-left: 2.5rem;
+        gap: 6rem;
+    }
+
+    .list {
+        font-size: 0.9rem;
+    }
+
+    .form-div {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .suggestions-button {
+        max-width: 12rem;
+    }
+
+    .wine-glass-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 578px) {
+    .wine-text-list {
+        margin-left: 4rem;
+        gap: 3rem;
     }
 }
 
@@ -79,7 +145,24 @@
         width: 4rem;
     }
 
+    .wine-text-list {
+        margin-left: 4rem;
+        gap: 3.5rem;
+    }
+
     .list {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+    }
+
+    .wine-glass-icon {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .wine-text-list {
+        margin-left: 2.5rem;
+        gap: 2rem;
     }
 }

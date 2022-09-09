@@ -3,7 +3,7 @@ import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import { PencilFill, GeoAlt } from "react-bootstrap-icons";
 import { storage } from '../fire';
 import "../css/Account.css";
-import Spinner from 'react-bootstrap/Spinner';
+import { SpinnerDiamond } from "spinners-react";
 
 export default function Account() {
     const [file, setFile] = useState(null);
@@ -74,8 +74,8 @@ export default function Account() {
                                             {/* <img src="https://rentkh.com/assets/avatar.jpeg" alt="Avatar_Image" width="150" height="150" onClick={handleShow} /> */}
                                         </form>
                                         {url !== "" ? <img src={url} width="180" height="180" onClick={handleShow} className="profile-pic" /> :
-                                            <img src="https://rentkh.com/assets/avatar.jpeg" width="180" height="180" onClick={handleShow} className="profile-pic" />}
-                                        {isLoading && <Spinner animation="grow" variant="success" className="spinner" />}
+                                            <img src="https://images.unsplash.com/flagged/photo-1557753478-b9fb74f39eb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z3JlZW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="180" height="180" onClick={handleShow} className="profile-pic" />}
+                                        {isLoading && <SpinnerDiamond className="spinner" />}
                                     </div>
                                     <div className="heading-info">
                                         <h4>{details.firstname || details.lastname !== "" ? <h4>{details.firstname} {details.lastname}</h4> : "Harika Kommuri"}</h4>

@@ -47,7 +47,7 @@ const HomePageContent = () => {
                             <Col sm={12} class="offset-md-2">
                                 <div className="main-content">
                                     <h1 className="main-head">Let's Start Cooking Now!</h1>
-                                    <h5 class="head2">Want to learn cooking but don't know how?<br />
+                                    <h5 className="head2">Want to learn cooking but don't know how?<br />
                                         Explore recipes from a wide range of cuisines at FoodMood</h5>
                                     <h5 className="head3">Want to eat Nutritious food?<br />
                                         No Problem, try our state of the art Meal Planner</h5>
@@ -136,19 +136,20 @@ const HomePageContent = () => {
                                         borderRadius: "50%", height: "10rem", width: "10rem", marginBottom: "1rem",
                                         objectFit: "cover"
                                     }} />
-                                        <p class="text-center" style={{ fontSize: ".9rem", fontWeight: 600, color: "#4f5a56" }}>{recipe.title}</p>
+                                        <p className="text-center" style={{ fontSize: ".9rem", fontWeight: 600, color: "#4f5a56" }}>{recipe.title}</p>
                                     </div>
                                 </Col>))}
 
                             {popularrecipes.slice(6, 9).map((recipes) => (
                                 <Col xs={12} md={3} key={recipes.id}>
-                                    <div className="d-flex flex-column align-items-center px-4"><Image src={recipes.image} alt="image"
-                                        onClick={() => navigate(`/SingleRecipe/${recipes.id}`)}
-                                        style={{
-                                            borderRadius: "50%", height: "10rem", width: "10rem",
-                                            objectFit: "cover", marginTop: "2rem", marginBottom: "1rem"
-                                        }} />
-                                        <p class="text-center" style={{ fontSize: ".9rem", fontWeight: 600, color: "#4f5a56", marginBottom: "2rem" }}>{recipes.title}</p></div>
+                                    <div className="d-flex flex-column align-items-center px-4">
+                                        <Image src={recipes.image} alt="image"
+                                            onClick={() => navigate(`/SingleRecipe/${recipes.id}`)}
+                                            style={{
+                                                borderRadius: "50%", height: "10rem", width: "10rem",
+                                                objectFit: "cover", marginTop: "2rem", marginBottom: "1rem"
+                                            }} />
+                                        <p className="text-center" style={{ fontSize: ".9rem", fontWeight: 600, color: "#4f5a56", marginBottom: "2rem" }}>{recipes.title}</p></div>
                                 </Col>
                             ))}
                         </Row>
