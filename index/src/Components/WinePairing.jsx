@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Form, Button, Container, Row, Col, Image } from 'react-bootstrap'
 import winepic from '../Assets/wine.jpg';
-import wine2 from '../Assets/wine2.jpg';
+import wine7 from '../Assets/wine7.jpg';
 import wine3 from '../Assets/wine3.jpg';
 import wine5 from '../Assets/wine5.jpg';
 import WineGlass from '../Assets/wine-glass.png';
@@ -86,7 +86,7 @@ const WinePairing = () => {
                                                         ))}
                                                     </div>
                                                     <div className="wine-images" style={{ display: "flex", justifyContent: "space-evenly" }}>
-                                                        <img src={wine2} alt="wine pic" className="wine1" />
+                                                        <img src={wine7} alt="wine pic" className="wine1" />
                                                         <img src={wine3} alt="wine pic" className="wine1" />
                                                         <img src={wine5} alt="wine pic" className="wine1" />
                                                     </div>

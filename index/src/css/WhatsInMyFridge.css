@@ -6,6 +6,10 @@
     font-family: 'Jost', sans-serif;
 }
 
+.fridge-text-div {
+    margin-left: 2rem;
+}
+
 .card_style {
     background-color: whitesmoke;
 }
@@ -56,6 +60,10 @@
         height: 9rem;
         width: 9rem;
     }
+
+    .fridge_pic {
+        margin-left: 6rem;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -80,5 +88,13 @@
         height: 9rem;
         width: 9rem;
         left: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .fridge-form-div {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
     }
 }
