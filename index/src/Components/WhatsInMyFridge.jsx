@@ -57,7 +57,7 @@ const WhatsInMyFridge = () => {
                                                 <Form.Label style={{ fontWeight: "bold", fontSize: "1.3rem", marginRight: "1rem" }}>Enter the Ingredients</Form.Label>
                                                 <Form.Control type="text" placeholder="Enter items seperated with Comma (,)" onChange={handleChange}
                                                     style={{ width: "15rem" }} />
-                                                <Button variant="success" style={{ backgroundColor: "#35B066", border: "none", marginLeft: "1rem" }} onClick={fetchRecipes}>Get Recipes</Button>
+                                                <Button variant="success" className="fridge-button" onClick={fetchRecipes}>Get Recipes</Button>
                                             </div>
 
                                         </Form>

@@ -21,6 +21,17 @@
     box-shadow: none;
 }
 
+.suggestions-button {
+    background-color: #35B066;
+    border: none;
+    margin-left: 1rem;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.suggestions-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
 .result-container {
     margin-top: 2rem;
     background-color: whitesmoke;

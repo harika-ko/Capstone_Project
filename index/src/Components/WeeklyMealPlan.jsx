@@ -60,7 +60,7 @@ const WeeklyMealPlan = () => {
                             <Col>
                                 <div class="head-class">
                                     <h1 className="main-headingg">Your Weekly Meal Plan is here! </h1>
-                                    <Button variant="success" className="button" onClick={fetchMealPlanning}>Generate New Plan</Button>
+                                    <Button variant="success" className="weekly-button" onClick={fetchMealPlanning}>Generate New Plan</Button>
                                 </div>
 
                                 <div>

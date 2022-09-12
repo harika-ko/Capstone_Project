@@ -61,7 +61,7 @@ const WinePairing = () => {
                                                     <Form.Label style={{ fontWeight: "bold", fontSize: "1.3rem", marginRight: "1rem" }}>Enter the Food</Form.Label>
                                                     <Form.Control type="text" placeholder="Enter the food here" onChange={handleChange} className="input-text"
                                                         style={{ width: "13rem" }} />
-                                                    <Button className="suggestions-button" variant="success" style={{ backgroundColor: "#35B066", border: "none", marginLeft: "1rem" }} onClick={() => { fetchWine(); setHasFood(true); }}>Get Suggestions</Button>
+                                                    <Button className="suggestions-button" variant="success" onClick={() => { fetchWine(); setHasFood(true); }}>Get Suggestions</Button>
                                                 </div>
                                             </Form>
                                         </div>
@@ -86,8 +86,8 @@ const WinePairing = () => {
                                                         ))}
                                                     </div>
                                                     <div className="wine-images" style={{ display: "flex", justifyContent: "space-evenly" }}>
-                                                        <img src={wine7} alt="wine pic" className="wine1" />
                                                         <img src={wine3} alt="wine pic" className="wine1" />
+                                                        <img src={wine7} alt="wine pic" className="wine1" />
                                                         <img src={wine5} alt="wine pic" className="wine1" />
                                                     </div>
                                                 </div>

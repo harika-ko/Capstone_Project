@@ -58,7 +58,7 @@ const DailyMealPlan = () => {
                                         <Form.Control type="number" placeholder="Calories (e.g. 2000)" onChange={handleChange}
                                             style={{ width: "13rem" }} />
                                     </div>
-                                    <Button variant="success" style={{ backgroundColor: "#35B066", border: "none", marginTop: "1rem" }} onClick={() => {
+                                    <Button className="daily-button" variant="success" onClick={() => {
                                         fetchMealPlanning();
                                         setFood(true);
                                     }}>Get Daily Meal Plan</Button>

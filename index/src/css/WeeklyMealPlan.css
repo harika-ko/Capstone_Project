@@ -27,18 +27,15 @@
     text-align: center;
 }
 
-.button {
+.weekly-button {
     background-color: #35B066;
     border: none;
     margin-top: 1rem;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.button:hover {
-    background-color: #34B267;
-}
-
-.button:focus {
-    background-color: #34B267;
+.weekly-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .week-day {
@@ -96,6 +93,11 @@
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: 0.2rem;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.recipe-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .div-button {
