@@ -21,7 +21,11 @@
 }
 
 .underline {
-    text-decoration: underline;
+    border-bottom: 3px solid green;
+    padding-bottom: 0;
+    padding-inline: 0;
+    text-decoration: none;
+    margin-inline: 15px
 }
 
 .nav-data:hover {

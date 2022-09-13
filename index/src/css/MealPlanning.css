@@ -46,8 +46,14 @@
     box-shadow: 5px 6px 6px grey;
 }
 
+.image1:hover {
+    transform: scale(1.05);
+    transition: 0.15s;
+    box-shadow: 5px 6px 30px grey;
+    filter: brightness(1.1);
+}
+
 .image2 {
-    /* background-image: url("https://images.all-free-download.com/images/graphiclarge/food_picture_01_hd_pictures_167558.jpg"); */
     background-image: url("https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc3fHxmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
     height: 20rem;
     width: 30rem;
@@ -60,6 +66,13 @@
     border: 1px solid grey;
     box-shadow: 5px 6px 6px grey;
     object-fit: cover;
+}
+
+.image2:hover {
+    transform: scale(1.05);
+    transition: 0.15s;
+    box-shadow: 5px 6px 30px grey;
+    filter: brightness(1.1);
 }
 
 .head1 {

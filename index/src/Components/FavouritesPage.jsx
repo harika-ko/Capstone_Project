@@ -21,13 +21,13 @@ const FavouritesPage = () => {
                                     <Col md={6} key={i}>
                                         <div style={{
                                             backgroundColor: "whitesmoke", display: "flex", justifyContent: "space-around",
-                                            padding: "1rem", borderRadius: "1rem", marginBottom: "2rem"
+                                            padding: "1rem", borderRadius: "1rem", marginBottom: "2rem", gap: "21px"
                                         }}>
                                             <div>
-                                                <h4>{singlerecipe.title}</h4>
-                                                <p>Health Score: {singlerecipe.healthScore}</p>
-                                                <h5>Ready In {singlerecipe.readyInMinutes} mins</h5>
-                                                <h5>For {singlerecipe.servings} people</h5>
+                                                <h4 className="fav-recipe-title">{singlerecipe.title}</h4>
+                                                <p className="health-score">Health Score: {singlerecipe.healthScore}</p>
+                                                <h6 className="ready-serve">Ready In {singlerecipe.readyInMinutes} mins</h6>
+                                                <h6 className="ready-serve">For {singlerecipe.servings} people</h6>
                                             </div>
 
                                             <div>

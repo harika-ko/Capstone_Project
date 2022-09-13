@@ -31,7 +31,7 @@ const WinePairing = () => {
 
     const fetchWine = async () => {
         let response = await fetch(
-            `https://api.spoonacular.com/food/wine/pairing?food=${food}&apiKey=efa6acc08dd640f298c7d189883b3fbb`,
+            `https://api.spoonacular.com/food/wine/pairing?food=${food}&apiKey=b26a2f3b0a00495588fc37298906d486`,
             options
         );
         let responseData = await response.json();
