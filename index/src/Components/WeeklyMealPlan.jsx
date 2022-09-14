@@ -28,7 +28,7 @@ const WeeklyMealPlan = () => {
     const fetchMealPlanning = async () => {
 
         let response = await fetch(
-            `https://api.spoonacular.com/mealplanner/generate?apiKey=b26a2f3b0a00495588fc37298906d486&timeFrame=week`,
+            `https://api.spoonacular.com/mealplanner/generate?apiKey=7d037e2e5e7c41b28f796eb9af1c7522&timeFrame=week`,
             options
         );
         let responseData = await response.json();

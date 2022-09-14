@@ -50,7 +50,7 @@ const Searchbar = ({ id }) => {
 
     const fetchData = async () => {
         let response = await fetch(
-            "https://api.spoonacular.com/recipes/complexSearch?number=5219&apiKey=b26a2f3b0a00495588fc37298906d486", options
+            "https://api.spoonacular.com/recipes/complexSearch?number=5219&apiKey=7d037e2e5e7c41b28f796eb9af1c7522", options
         );
         let responseData = await response.json();
         console.log("This is search console", responseData);

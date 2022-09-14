@@ -51,7 +51,7 @@ const SingleRecipe = () => {
     const fetchSingleRecipe = async () => {
 
         let response = await fetch(
-            `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=b26a2f3b0a00495588fc37298906d486`,
+            `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=7d037e2e5e7c41b28f796eb9af1c7522`,
             options
         );
         let responseData = await response.json();

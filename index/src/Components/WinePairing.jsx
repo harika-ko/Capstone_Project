@@ -31,7 +31,7 @@ const WinePairing = () => {
 
     const fetchWine = async () => {
         let response = await fetch(
-            `https://api.spoonacular.com/food/wine/pairing?food=${food}&apiKey=b26a2f3b0a00495588fc37298906d486`,
+            `https://api.spoonacular.com/food/wine/pairing?food=${food}&apiKey=7d037e2e5e7c41b28f796eb9af1c7522`,
             options
         );
         let responseData = await response.json();
@@ -57,8 +57,11 @@ const WinePairing = () => {
                                         </h4>
                                         <div>
                                             <Form style={{ marginTop: "2rem" }}>
-                                                <div className="form-div" style={{ display: "flex" }}>
+                                                <div className="form-div">
                                                     <Form.Label style={{ fontWeight: "bold", fontSize: "1.3rem", marginRight: "1rem" }}>Enter the Food</Form.Label>
+
+                                                </div>
+                                                <div style={{ display: "flex" }}>
                                                     <Form.Control type="text" placeholder="Enter the food here" onChange={handleChange} className="input-text"
                                                         style={{ width: "13rem" }} />
                                                     <Button className="suggestions-button" variant="success" onClick={() => { fetchWine(); setHasFood(true); }}>Get Suggestions</Button>

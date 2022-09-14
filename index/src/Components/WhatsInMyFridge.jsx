@@ -30,7 +30,7 @@ const WhatsInMyFridge = () => {
 
     const fetchRecipes = async () => {
         let response = await fetch(
-            `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&number=9&apiKey=b26a2f3b0a00495588fc37298906d486`,
+            `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&number=9&apiKey=7d037e2e5e7c41b28f796eb9af1c7522`,
             options
         );
         let responseData = await response.json();
@@ -52,9 +52,11 @@ const WhatsInMyFridge = () => {
                                         <h1 style={{ color: "#34B267" }}>What's in my Fridge?</h1>
                                         <h4 style={{ marginTop: "2rem", fontSize: "1.4rem" }}>List all the Ingredients available in your fridge right now<br></br>
                                             and get new recipes to make! </h4>
-                                        <Form style={{ marginTop: "2rem", textAlign: "center" }}>
-                                            <div style={{ display: "flex" }} className="fridge-form-div">
+                                        <Form style={{ marginTop: "2rem" }}>
+                                            <div className="fridge-form-div">
                                                 <Form.Label style={{ fontWeight: "bold", fontSize: "1.3rem", marginRight: "1rem" }}>Enter the Ingredients</Form.Label>
+                                            </div>
+                                            <div style={{ display: "flex" }} >
                                                 <Form.Control type="text" placeholder="Enter items seperated with Comma (,)" onChange={handleChange}
                                                     style={{ width: "15rem" }} />
                                                 <Button variant="success" className="fridge-button" onClick={fetchRecipes}>Get Recipes</Button>

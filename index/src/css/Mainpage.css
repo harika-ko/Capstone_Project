@@ -8,12 +8,13 @@
 
 .main_sec {
     padding-top: 3rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
 }
 
 .main_cont {
     background-color: white;
     border-radius: 1rem;
+    margin-top: 1rem;
 }
 
 .col-style {
