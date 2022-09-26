@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Form, Button, Container, Row, Col, Image } from 'react-bootstrap'
+import { Form, Button, Container, Row, Col, Image, Alert } from 'react-bootstrap'
 import winepic from '../Assets/wine.jpg';
 import wine7 from '../Assets/wine7.jpg';
 import wine3 from '../Assets/wine3.jpg';
@@ -13,6 +13,7 @@ const WinePairing = () => {
     const [food, setFood] = useState([])
     const [text, setText] = useState("")
     const [hasfood, setHasFood] = useState(false)
+    const [input, setInput] = useState(false)
 
     function handleChange(e) {
         setFood(e.target.value)
@@ -28,6 +29,7 @@ const WinePairing = () => {
             "Content-Type": "application/json",
         },
     };
+
 
     const fetchWine = async () => {
         let response = await fetch(
@@ -46,9 +48,9 @@ const WinePairing = () => {
 
             <div class="first-cont">
                 <div className="second_container">
-                    <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem", paddingBottom: "1rem" }}>
+                    <Container className="wine-cont">
                         <Row>
-                            <Col>
+                            <Col className="wp-col">
                                 <div style={{ display: "flex" }}>
                                     <div xs={6} className="wp-text-div">
                                         <h1 style={{ color: "#34B267" }}>Wine Pairing</h1>
@@ -74,7 +76,7 @@ const WinePairing = () => {
                                     </div>
                                 </div>
 
-                                <Container>
+                                <Container className="result-main">
                                     <Row>
                                         {hasfood ? (
                                             <Col className="result-container">

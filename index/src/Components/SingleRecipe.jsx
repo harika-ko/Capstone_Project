@@ -12,18 +12,17 @@ const SingleRecipe = () => {
 
     const [singlerecipe, setSingleRecipe] = useState({})
 
-    const favourites = useSelector((state) => state.favourites);
+    const favourites = useSelector((state) => state.favourites) || [];
 
     const dispatch = useDispatch();
 
     const isFav = favourites.includes(singlerecipe);
+
     const toggleFavourite = () => {
         isFav
             ? dispatch(removeFavourite(singlerecipe))
             : dispatch(addFavourite(singlerecipe));
     };
-
-
 
     const [instructions, setInstructions] = useState([])
 
@@ -51,7 +50,7 @@ const SingleRecipe = () => {
     const fetchSingleRecipe = async () => {
 
         let response = await fetch(
-            `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=7d037e2e5e7c41b28f796eb9af1c7522`,
+            `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=192717ff7b47486faf8af662e370d037`,
             options
         );
         let responseData = await response.json();
@@ -90,7 +89,6 @@ const SingleRecipe = () => {
                                                             size={25}
                                                             className="me-4 my-auto"
                                                             onClick={toggleFavourite}
-
                                                         />
                                                     ) : (
                                                         <Heart
@@ -100,6 +98,7 @@ const SingleRecipe = () => {
                                                             onClick={toggleFavourite}
                                                         />
                                                     )}
+
                                                 </div>
                                                 <h5 style={{ marginTop: "1.8rem", marginBottom: "1.8rem" }}>Method</h5>
                                                 {instructions.map(step => (

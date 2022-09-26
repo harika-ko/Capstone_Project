@@ -14,7 +14,8 @@
 .main_cont {
     background-color: white;
     border-radius: 1rem;
-    margin-top: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
 }
 
 .col-style {

@@ -15,7 +15,7 @@ const FavouritesPage = () => {
                 <Container style={{ backgroundColor: "white", borderRadius: "1rem", paddingTop: "1rem" }}>
                     <h1 style={{ textAlign: "center", color: "#35B066", marginBottom: "2rem" }}>My Favourite Recipes</h1>
                     <Row>
-                        {favourites !== null &&
+                        {favourites &&
                             favourites.map((singlerecipe, i) => (
                                 <>
                                     <Col md={6} key={i}>
