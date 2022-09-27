@@ -1,6 +1,6 @@
 # FoodMood
 
-This application is all about food with various features.
+This application is for Food lovers built with various features in single application.
 
 User can "Sign Up" or if they already did sign up they can "Login"
 
@@ -37,6 +37,11 @@ When clicked on "View detailed recipe" user can check the recipe details and ing
 The recipe will then be added to "My Favorites" and also can be removed if required
 
 ![image](https://user-images.githubusercontent.com/100945354/192490076-7d515d08-98df-460a-ac70-8413124cb6af.png)
+
+The final feature is "Wine Pairing" where user can input a dish, ingredient or a cuisine and get wine suggestions with a short description
+
+![image](https://user-images.githubusercontent.com/100945354/192491252-c4f9c233-eec3-4e69-aa07-4ccc9989529c.png)
+
 
 
 
