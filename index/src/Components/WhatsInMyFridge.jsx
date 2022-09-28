@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react"
-import { Form, Button, Container, Card, Col, Row, Image } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
-import fridge from '../Assets/fridge.png'
-import '../css/WhatsInMyFridge.css'
+import { useState, useEffect } from "react";
+import { Form, Button, Container, Card, Col, Row, Image } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import fridge from '../Assets/fridge.png';
+import '../css/WhatsInMyFridge.css';
+import swal from 'sweetalert';
 
 
 const WhatsInMyFridge = () => {
@@ -15,6 +16,17 @@ const WhatsInMyFridge = () => {
     useEffect(() => {
         fetchRecipes();
     }, []);
+
+    const handleClick = () => {
+        if (ingredients.length === 0) {
+            swal({
+                title: "OOPS!",
+                text: "Input Ingredients cannot be blank...",
+                icon: "error",
+                dangerMode: true,
+            });
+        }
+    }
 
 
     function handleChange(e) {
@@ -30,7 +42,7 @@ const WhatsInMyFridge = () => {
 
     const fetchRecipes = async () => {
         let response = await fetch(
-            `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&number=9&apiKey=7d037e2e5e7c41b28f796eb9af1c7522`,
+            `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&number=9&apiKey=f63cf5b7f4494e8d8820acbd1d0700f3`,
             options
         );
         let responseData = await response.json();
@@ -59,7 +71,7 @@ const WhatsInMyFridge = () => {
                                             <div style={{ display: "flex" }} >
                                                 <Form.Control type="text" placeholder="Enter items seperated with Comma (,)" onChange={handleChange}
                                                     style={{ width: "15rem" }} />
-                                                <Button variant="success" className="fridge-button" onClick={fetchRecipes}>Get Recipes</Button>
+                                                <Button variant="success" className="fridge-button" onClick={() => { fetchRecipes(); handleClick(); }}>Get Recipes</Button>
                                             </div>
 
                                         </Form>

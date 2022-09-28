@@ -18,8 +18,8 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/HomePageFinal' element={<HomePageFinal />} />
+          <Route index path='/' element={<Login />} />
+          <Route path='/home' element={<HomePageFinal />} />
           <Route path='/SingleRecipe/:id' element={<SingleRecipeFinal />} />
           <Route path='/MealPlanning' element={<MealPlanning />} />
           <Route path='/DailyMealPlan' element={<DailyMealPlanFinal />} />

@@ -23,7 +23,7 @@ const HomePageContent = () => {
         },
     };
 
-    const key = "7d037e2e5e7c41b28f796eb9af1c7522"
+    const key = "192717ff7b47486faf8af662e370d037"
 
     const fetchPopularRecipes = async () => {
 

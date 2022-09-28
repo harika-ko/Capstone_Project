@@ -18,7 +18,7 @@ const NavBar = () => {
             <Row>
                 <Col>
                     <Navbar expand="lg" className="main-nav" >
-                        <Navbar.Brand href="/HomePageFinal" className="heading">Food<span style={{ color: "#34B267", fontWeight: "bold" }}>Mood</span></Navbar.Brand>
+                        <Navbar.Brand href="/home" className="heading">Food<span style={{ color: "#34B267", fontWeight: "bold" }}>Mood</span></Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto text-size" >
@@ -53,7 +53,7 @@ const NavBar = () => {
                                     <div className="dropdown-content">
                                         <a href="/Account">My Profile</a>
                                         <a href="/favourites">My Favorites</a>
-                                        <a href="/" onClick={handleLogout}>Sign Out</a>
+                                        <Link to="/" onClick={handleLogout}>Sign Out</Link>
                                     </div>
                                 </div>
                             </div>
