@@ -5,7 +5,8 @@ import wine7 from '../Assets/wine7.jpg';
 import wine3 from '../Assets/wine3.jpg';
 import wine5 from '../Assets/wine5.jpg';
 import WineGlass from '../Assets/wine-glass.png';
-import "../css/WinePairing.css"
+import "../css/WinePairing.css";
+import swal from 'sweetalert';
 
 const WinePairing = () => {
 
@@ -22,6 +23,28 @@ const WinePairing = () => {
     useEffect(() => {
         fetchWine();
     }, []);
+
+    const handleClick = () => {
+        if (food.length === 0) {
+            swal({
+                title: "OOPS!",
+                text: "Input Food cannot be blank...",
+                icon: "error",
+                dangerMode: true,
+            });
+            setHasFood(false);
+        }
+    }
+
+    const handleFood = () => {
+        swal({
+            title: "OOPS!",
+            text: "Please enter a valid Food name",
+            icon: "error",
+            dangerMode: true,
+        });
+        setHasFood(false);
+    }
 
     let options = {
         method: "GET",
@@ -40,6 +63,10 @@ const WinePairing = () => {
         console.log("This is Wine pairing get console", responseData);
         setWine(responseData.pairedWines)
         setText(responseData.pairingText)
+
+        if (responseData.message.includes("Could not find a wine pairing for")) {
+            handleFood();
+        }
     }
 
     return (
@@ -66,7 +93,7 @@ const WinePairing = () => {
                                                 <div style={{ display: "flex" }}>
                                                     <Form.Control type="text" placeholder="Enter the food here" onChange={handleChange} className="input-text"
                                                         style={{ width: "13rem" }} />
-                                                    <Button className="suggestions-button" variant="success" onClick={() => { fetchWine(); setHasFood(true); }}>Get Suggestions</Button>
+                                                    <Button className="suggestions-button" variant="success" onClick={() => { fetchWine(); setHasFood(true); handleClick(); }}>Get Suggestions</Button>
                                                 </div>
                                             </Form>
                                         </div>

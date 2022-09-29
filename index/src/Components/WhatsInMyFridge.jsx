@@ -28,7 +28,6 @@ const WhatsInMyFridge = () => {
         }
     }
 
-
     function handleChange(e) {
         setIngredients(e.target.value)
     }
@@ -85,7 +84,7 @@ const WhatsInMyFridge = () => {
                                 </div>
                                 <Container>
                                     <Row>
-                                        {recipes.map((recipe) => {
+                                        {recipes && recipes.map((recipe) => {
                                             if (recipe.missedIngredientCount <= 2) {
                                                 return (
                                                     <>
